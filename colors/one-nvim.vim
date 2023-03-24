@@ -229,15 +229,20 @@ local highlight_groups = {
 -- Diff Highlighting --
 -----------------------
 
-     DiffAdd     = { fg = syntax_color_added, bg = visual_grey},
-     DiffChange  = { fg = syntax_color_modified, bg = visual_grey},
-     DiffDelete  = { fg = syntax_color_removed, bg = visual_grey},
-     DiffText    = { fg = hue_2, bg = visual_grey},
-     DiffAdded   = { fg = hue_4, bg = visual_grey},
-     DiffFile    = { fg = hue_5, bg = visual_grey},
-     DiffNewFile = { fg = hue_4, bg = visual_grey},
-     DiffLine    = { fg = hue_2, bg = visual_grey},
-     DiffRemoved = { fg = hue_5, bg = visual_grey},
+     -- DiffAdd     = { fg = syntax_color_added, bg = visual_grey},
+     -- DiffChange  = { fg = syntax_color_modified, bg = visual_grey},
+     -- DiffDelete  = { fg = syntax_color_removed, bg = visual_grey},
+     -- DiffText    = { fg = hue_2, bg = visual_grey},
+     -- DiffAdded   = { fg = hue_4, bg = visual_grey},
+     -- DiffFile    = { fg = hue_5, bg = visual_grey},
+     -- DiffNewFile = { fg = hue_4, bg = visual_grey},
+     -- DiffLine    = { fg = hue_2, bg = visual_grey},
+     -- DiffRemoved = { fg = hue_5, bg = visual_grey},
+     DiffAdd     = { fg = syntax_color_added },
+     DiffAdded   = { fg = syntax_color_added },
+     DiffChange  = { fg = syntax_color_modified },
+     DiffDelete  = { fg = syntax_color_removed },
+     DiffRemoved = { fg = syntax_color_removed },
 
 ---------------------------
 -- Filetype Highlighting --
