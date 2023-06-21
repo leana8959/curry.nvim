@@ -10,19 +10,19 @@ if vim.o.background == "dark" then
          @syntax-gutter-background-color-selected: lighten(@syntax-bg, 8%);
          for color in $(cat colors/one-nvim.vim | head -n 41 | tail -n 28 | cut -d '#' -f2 | cut -d '"' -f1); do hex2xterm $color | grep 'Hexadecimal\|xterm256'; done
     --]]
-	mono_1                = { "#abb2bf", 145, "mono_1" }      -- hsl(@syntax-hue, 14%, 71%);
-	mono_2                = { "#828997", 102, "mono_2" }      -- hsl(@syntax-hue,  9%, 55%);
-	mono_3                = { "#5c6370", 59, "mono_3" }       -- hsl(@syntax-hue, 10%, 40%);
-	mono_4                = { "#4b5263", 240, "mono_4" }      --
-	hue_1                 = { "#56b6c2", 247, "hue_1" }       -- hsl(187, 47%, 55%);
-	hue_2                 = { "#61afef", 75, "hue_2" }        -- hsl(207, 82%, 66%);
-	hue_3                 = { "#c678dd", 176, "hue_3" }       -- hsl(286, 60%, 67%);
-	hue_4                 = { "#98c379", 114, "hue_4" }       -- hsl( 95, 38%, 62%);
-	hue_5                 = { "#e06c75", 168, "hue_5" }       -- hsl(355, 65%, 65%);
-	hue_5_2               = { "#be5046", 131, "hue_5_2" }     -- hsl(  5, 48%, 51%);
-	hue_6                 = { "#d19a66", 247, "hue_6" }       -- hsl( 29, 54%, 61%);
-	hue_6_2               = { "#e5c07b", 180, "hue_6_2" }     -- hsl( 39, 67%, 69%);
-	syntax_bg             = { "#282c34", 17, "syntax_bg" }    -- hsl(@syntax-hue, @syntax-saturation, @syntax-brightness);
+	mono_1                = { "#abb2bf", 145, "mono_1" }     -- hsl(@syntax-hue, 14%, 71%);
+	mono_2                = { "#828997", 102, "mono_2" }     -- hsl(@syntax-hue,  9%, 55%);
+	mono_3                = { "#5c6370", 59, "mono_3" }      -- hsl(@syntax-hue, 10%, 40%);
+	mono_4                = { "#4b5263", 240, "mono_4" }     --
+	hue_1                 = { "#56b6c2", 247, "hue_1" }      -- hsl(187, 47%, 55%);
+	hue_2                 = { "#61afef", 75, "hue_2" }       -- hsl(207, 82%, 66%);
+	hue_3                 = { "#c678dd", 176, "hue_3" }      -- hsl(286, 60%, 67%);
+	hue_4                 = { "#98c379", 114, "hue_4" }      -- hsl( 95, 38%, 62%);
+	hue_5                 = { "#e06c75", 168, "hue_5" }      -- hsl(355, 65%, 65%);
+	hue_5_2               = { "#be5046", 131, "hue_5_2" }    -- hsl(  5, 48%, 51%);
+	hue_6                 = { "#d19a66", 247, "hue_6" }      -- hsl( 29, 54%, 61%);
+	hue_6_2               = { "#e5c07b", 180, "hue_6_2" }    -- hsl( 39, 67%, 69%);
+	syntax_bg             = { "#282c34", 17, "syntax_bg" }   -- hsl(@syntax-hue, @syntax-saturation, @syntax-brightness);
 	syntax_gutter         = { "#636d83", 241, "syntax_gutter" } -- darken(@syntax-fg, 26%);
 	syntax_cursor         = { "#2c323c", 23, "syntax_cursor" }
 	syntax_accent         = { "#528bff", 69, "syntax_accent" } -- hsl(@syntax-hue, 100%, 66% );
@@ -35,7 +35,7 @@ if vim.o.background == "dark" then
 	term_cyan             = { "#56b6c2", 247, "term_cyan" }
 	term_white            = { "#dcdfe4", 188, "term_white" }
 	term_8                = { "#5d677a", 242, "term_8" }
-	syntax_color_added    = { "#43d08a", 78, "syntax_color_added" }   -- hsl(150,  60%, 54%);
+	syntax_color_added    = { "#43d08a", 78, "syntax_color_added" }  -- hsl(150,  60%, 54%);
 	syntax_color_modified = { "#e0c285", 250, "syntax_color_modified" } -- hsl(40,   60%, 70%);
 	syntax_color_removed  = { "#e05252", 244, "syntax_color_removed" } -- hsl(0,    70%, 60%);
 else
@@ -48,19 +48,19 @@ else
          @syntax-gutter-background-color-selected: darken(@syntax-bg, 8%);
          for color in $(cat colors/one-nvim.vim | head -n 79 | tail -n 28 | cut -d '#' -f2 | cut -d '"' -f1); do hex2xterm $color | grep 'Hexadecimal\|xterm256'; done
     --]]
-	mono_1                = { "#383A42", 59, "mono_1" }       -- hsl(@syntax-hue, 8%, 24%);
-	mono_2                = { "#696c77", 60, "mono_2" }       -- hsl(@syntax-hue, 6%, 44%);
-	mono_3                = { "#a0a1a7", 247, "mono_3" }      -- hsl(@syntax-hue, 4%, 64%);
-	mono_4                = { "#c2c2c3", 251, "mono_4" }      --
-	hue_1                 = { "#0184bc", 31, "hue_1" }        -- hsl(198, 99%, 37%);
-	hue_2                 = { "#4078f2", 69, "hue_2" }        -- hsl(221, 87%, 60%);
-	hue_3                 = { "#a626a4", 243, "hue_3" }       -- hsl(301, 63%, 40%);
-	hue_4                 = { "#50a14f", 242, "hue_4" }       -- hsl(119, 34%, 47%);
-	hue_5                 = { "#e45649", 244, "hue_5" }       -- hsl(  5, 74%, 59%);
-	hue_5_2               = { "#ca1243", 241, "hue_5_2" }     -- hsl(344, 84%, 43%);
-	hue_6                 = { "#986801", 94, "hue_6" }        -- hsl(41, 99%, 30%);
-	hue_6_2               = { "#c18401", 242, "hue_6_2" }     -- hsl(41, 99%, 38%)
-	syntax_bg             = { "#fafafa", 231, "syntax_bg" }   -- hsl(@syntax-hue, @syntax-saturation, @syntax-brightness);
+	mono_1                = { "#383A42", 59, "mono_1" }      -- hsl(@syntax-hue, 8%, 24%);
+	mono_2                = { "#696c77", 60, "mono_2" }      -- hsl(@syntax-hue, 6%, 44%);
+	mono_3                = { "#a0a1a7", 247, "mono_3" }     -- hsl(@syntax-hue, 4%, 64%);
+	mono_4                = { "#c2c2c3", 251, "mono_4" }     --
+	hue_1                 = { "#0184bc", 31, "hue_1" }       -- hsl(198, 99%, 37%);
+	hue_2                 = { "#4078f2", 69, "hue_2" }       -- hsl(221, 87%, 60%);
+	hue_3                 = { "#a626a4", 243, "hue_3" }      -- hsl(301, 63%, 40%);
+	hue_4                 = { "#50a14f", 242, "hue_4" }      -- hsl(119, 34%, 47%);
+	hue_5                 = { "#e45649", 244, "hue_5" }      -- hsl(  5, 74%, 59%);
+	hue_5_2               = { "#ca1243", 241, "hue_5_2" }    -- hsl(344, 84%, 43%);
+	hue_6                 = { "#986801", 94, "hue_6" }       -- hsl(41, 99%, 30%);
+	hue_6_2               = { "#c18401", 242, "hue_6_2" }    -- hsl(41, 99%, 38%)
+	syntax_bg             = { "#fafafa", 231, "syntax_bg" }  -- hsl(@syntax-hue, @syntax-saturation, @syntax-brightness);
 	syntax_gutter         = { "#9e9e9e", 247, "syntax_gutter" } -- darken(@syntax-bg, 36%);
 	syntax_cursor         = { "#f0f0f0", 255, "syntax_cursor" }
 	syntax_accent         = { "#526fff", 246, "syntax_accent" } -- hsl(@syntax-hue, 100%, 66% );
@@ -73,7 +73,7 @@ else
 	term_cyan             = { "#0997b3", 243, "term_cyan" }
 	term_white            = { "#fafafa", 231, "term_white" }
 	term_8                = { "#4f525e", 240, "term_8" }
-	syntax_color_added    = { "#2db448", 65, "syntax_color_added" }   -- hsl(132,  60%, 44%);
+	syntax_color_added    = { "#2db448", 65, "syntax_color_added" }  -- hsl(132,  60%, 44%);
 	syntax_color_modified = { "#f2a60d", 137, "syntax_color_modified" } -- hsl(40,   90%, 50%);
 	syntax_color_removed  = { "#ff1414", 88, "syntax_color_removed" } -- hsl(0,    100%, 54%);
 end
@@ -683,76 +683,76 @@ local highlight_groups = {
 	TSURI                                = 'Underlined',
 	TSVariableBuiltin                    = 'Special',
 
-	-- ["@annotation"]            = { default       = true, link    = "PreProc", },
-	-- ["@attribute"]             = { default       = true, link    = "PreProc", },
-	-- ["@boolean"]               = { default       = true, link    = "Boolean", },
-	-- ["@character"]             = { default       = true, link    = "Character", },
-	-- ["@character.special"]     = { default       = true, link    = "SpecialChar", },
-	-- ["@comment"]               = { default       = true, link    = "Comment", },
-	-- ["@conditional"]           = { default       = true, link    = "Conditional", },
-	-- ["@constant"]              = { default       = true, link    = "Constant", },
-	-- ["@constant.builtin"]      = { default       = true, link    = "Special", },
-	-- ["@constant.macro"]        = { default       = true, link    = "Define", },
-	-- ["@constructor"]           = { default       = true, link    = "Special", },
-	-- ["@debug"]                 = { default       = true, link    = "Debug", },
-	-- ["@define"]                = { default       = true, link    = "Define", },
-	-- ["@exception"]             = { default       = true, link    = "Exception", },
-	-- ["@field"]                 = { default       = true, link    = "Identifier", },
-	-- ["@float"]                 = { default       = true, link    = "Float", },
-	-- ["@function"]              = { default       = true, link    = "Function", },
-	-- ["@function.builtin"]      = { default       = true, link    = "Special", },
-	-- ["@function.call"]         = { default       = true, link    = "@function", },
-	-- ["@function.macro"]        = { default       = true, link    = "Macro", },
-	-- ["@include"]               = { default       = true, link    = "Include", },
-	-- ["@keyword"]               = { default       = true, link    = "Keyword", },
-	-- ["@keyword.coroutine"]     = { default       = true, link    = "@keyword", },
-	-- ["@keyword.function"]      = { default       = true, link    = "Keyword", },
-	-- ["@keyword.operator"]      = { default       = true, link    = "@operator", },
-	-- ["@keyword.return"]        = { default       = true, link    = "@keyword", },
-	-- ["@label"]                 = { default       = true, link    = "Label", },
-	-- ["@method"]                = { default       = true, link    = "Function", },
-	-- ["@method.call"]           = { default       = true, link    = "@method", },
-	-- ["@namespace"]             = { default       = true, link    = "Include", },
-	-- ["@none"]                  = { default       = true, },
-	-- ["@number"]                = { default       = true, link    = "Number", },
-	-- ["@operator"]              = { default       = true, link    = "Operator", },
-	-- ["@parameter"]             = { default       = true, link    = "Identifier", },
-	-- ["@preproc"]               = { default       = true, link    = "PreProc", },
-	-- ["@property"]              = { default       = true, link    = "Identifier", },
-	-- ["@punctuation.bracket"]   = { default       = true, link    = "Delimiter", },
-	-- ["@punctuation.delimiter"] = { default       = true, link    = "Delimiter", },
-	-- ["@punctuation.special"]   = { default       = true, link    = "Delimiter", },
-	-- ["@repeat"]                = { default       = true, link    = "Repeat", },
-	-- ["@storageclass"]          = { default       = true, link    = "StorageClass", },
-	-- ["@string"]                = { default       = true, link    = "String", },
-	-- ["@string.escape"]         = { default       = true, link    = "SpecialChar", },
-	-- ["@string.regex"]          = { default       = true, link    = "String", },
-	-- ["@string.special"]        = { default       = true, link    = "SpecialChar", },
-	-- ["@symbol"]                = { default       = true, link    = "Identifier", },
-	-- ["@tag"]                   = { default       = true, link    = "Label", },
-	-- ["@tag.attribute"]         = { default       = true, link    = "@property", },
-	-- ["@tag.delimiter"]         = { default       = true, link    = "Delimiter", },
-	-- ["@text"]                  = { default       = true, link    = "@none", },
-	-- ["@text.danger"]           = { default       = true, link    = "WarningMsg", },
-	-- ["@text.emphasis"]         = { default       = true, italic  = true, },
-	-- ["@text.environment"]      = { default       = true, link    = "Macro", },
-	-- ["@text.environment.name"] = { default       = true, link    = "Type", },
-	-- ["@text.literal"]          = { default       = true, link    = "String", },
-	-- ["@text.math"]             = { default       = true, link    = "Special", },
-	-- ["@text.note"]             = { default       = true, link    = "SpecialComment", },
-	-- ["@text.reference"]        = { default       = true, link    = "Constant", },
-	-- ["@text.strike"]           = { strikethrough = true, },
-	-- ["@text.strong"]           = { bold          = true, default = true, },
-	-- ["@text.title"]            = { default       = true, link    = "Title", },
-	-- ["@text.underline"]        = { underline     = true, },
-	-- ["@text.uri"]              = { default       = true, link    = "Underlined", },
-	-- ["@text.warning"]          = { default       = true, link    = "Todo", },
-	-- ["@text.todo"]             = { default       = true, link    = "Todo", },
-	-- ["@type"]                  = { default       = true, link    = "Type", },
-	-- ["@type.builtin"]          = { default       = true, link    = "Type", },
-	-- ["@type.definition"]       = { default       = true, link    = "Typedef", },
-	-- ["@type.qualifier"]        = { default       = true, link    = "@keyword", },
-	-- ["@variable.builtin"]      = { default       = true, link    = "Special", },
+	["@annotation"]                      = "PreProc",
+	["@attribute"]                       = "PreProc",
+	["@boolean"]                         = "Boolean",
+	["@character"]                       = "Character",
+	["@character.special"]               = "SpecialChar",
+	["@comment"]                         = "Comment",
+	["@conditional"]                     = "Conditional",
+	["@constant"]                        = "Constant",
+	["@constant.builtin"]                = "Special",
+	["@constant.macro"]                  = "Define",
+	["@constructor"]                     = "Special",
+	["@debug"]                           = "Debug",
+	["@define"]                          = "Define",
+	["@exception"]                       = "Exception",
+	["@field"]                           = "Identifier",
+	["@float"]                           = "Float",
+	["@function"]                        = "Function",
+	["@function.builtin"]                = "Special",
+	["@function.call"]                   = "@function",
+	["@function.macro"]                  = "Macro",
+	["@include"]                         = "Include",
+	["@keyword"]                         = "Keyword",
+	["@keyword.coroutine"]               = "@keyword",
+	["@keyword.function"]                = "Keyword",
+	["@keyword.operator"]                = "@operator",
+	["@keyword.return"]                  = "@keyword",
+	["@label"]                           = "Label",
+	["@method"]                          = "Function",
+	["@method.call"]                     = "@method",
+	["@namespace"]                       = "Include",
+	["@none"]                            = { fg = none, bg = none },
+	["@number"]                          = "Number",
+	["@operator"]                        = "Operator",
+	["@parameter"]                       = "Identifier",
+	["@preproc"]                         = "PreProc",
+	["@property"]                        = "Identifier",
+	["@punctuation.bracket"]             = "Delimiter",
+	["@punctuation.delimiter"]           = "Delimiter",
+	["@punctuation.special"]             = "Delimiter",
+	["@repeat"]                          = "Repeat",
+	["@storageclass"]                    = "StorageClass",
+	["@string"]                          = "String",
+	["@string.escape"]                   = "SpecialChar",
+	["@string.regex"]                    = "String",
+	["@string.special"]                  = "SpecialChar",
+	["@symbol"]                          = "Identifier",
+	["@tag"]                             = "Label",
+	["@tag.attribute"]                   = "@property",
+	["@tag.delimiter"]                   = "Delimiter",
+	["@text"]                            = "@none",
+	["@text.danger"]                     = "WarningMsg",
+	["@text.emphasis"]                   = { style = "italic", },
+	["@text.environment"]                = "Macro",
+	["@text.environment.name"]           = "Type",
+	["@text.literal"]                    = "String",
+	["@text.math"]                       = "Special",
+	["@text.note"]                       = "SpecialComment",
+	["@text.reference"]                  = "Constant",
+	["@text.strike"]                     = { style = "strikethrough", },
+	["@text.strong"]                     = { style = "bold" },
+	["@text.title"]                      = "Title",
+	["@text.underline"]                  = { underline = true, },
+	["@text.uri"]                        = "Underlined",
+	["@text.warning"]                    = "Todo",
+	["@text.todo"]                       = "Todo",
+	["@type"]                            = "Type",
+	["@type.builtin"]                    = "Type",
+	["@type.definition"]                 = "Typedef",
+	["@type.qualifier"]                  = "@keyword",
+	["@variable.builtin"]                = "Special",
 }
 
 local terminal_ansi_colors = {
