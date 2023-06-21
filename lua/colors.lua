@@ -2,27 +2,27 @@ vim.g.colors_name = "one-nvim"
 
 if vim.o.background == "dark" then
 	--[[
-         Dark Colors
-         @syntax-hue:          220;
-         @syntax-saturation:   13%;
-         @syntax-brightness:   18%;
-         @syntax-fg:     @mono-1;
-         @syntax-gutter-background-color-selected: lighten(@syntax-bg, 8%);
-         for color in $(cat colors/one-nvim.vim | head -n 41 | tail -n 28 | cut -d '#' -f2 | cut -d '"' -f1); do hex2xterm $color | grep 'Hexadecimal\|xterm256'; done
-    --]]
-	mono_1                = { "#abb2bf", 145, "mono_1" } -- hsl(@syntax-hue, 14%, 71%);
-	mono_2                = { "#828997", 102, "mono_2" } -- hsl(@syntax-hue,  9%, 55%);
-	mono_3                = { "#5c6370", 59, "mono_3" }  -- hsl(@syntax-hue, 10%, 40%);
-	mono_4                = { "#4b5263", 240, "mono_4" } --
-	hue_1                 = { "#56b6c2", 247, "hue_1" }  -- hsl(187, 47%, 55%);
-	hue_2                 = { "#61afef", 75, "hue_2" }   -- hsl(207, 82%, 66%);
-	hue_3                 = { "#c678dd", 176, "hue_3" }  -- hsl(286, 60%, 67%);
-	hue_4                 = { "#98c379", 114, "hue_4" }  -- hsl( 95, 38%, 62%);
-	hue_5                 = { "#e06c75", 168, "hue_5" }  -- hsl(355, 65%, 65%);
-	hue_5_2               = { "#be5046", 131, "hue_5_2" } -- hsl(  5, 48%, 51%);
-	hue_6                 = { "#d19a66", 247, "hue_6" }  -- hsl( 29, 54%, 61%);
-	hue_6_2               = { "#e5c07b", 180, "hue_6_2" } -- hsl( 39, 67%, 69%);
-	syntax_bg             = { "#282c34", 17, "syntax_bg" } -- hsl(@syntax-hue, @syntax-saturation, @syntax-brightness);
+		Dark Colors
+		@syntax-hue                              : 220;
+		@syntax-saturation                       : 13%;
+		@syntax-brightness                       : 18%;
+		@syntax-fg                               : @mono-1;
+		@syntax-gutter-background-color-selected : lighten(@syntax-bg, 8%);
+		for color in $(cat colors/one-nvim.vim | head -n 41 | tail -n 28 | cut -d '#' -f2 | cut -d '"' -f1); do hex2xterm $color | grep 'Hexadecimal\|xterm256'; done
+	--]]
+	mono_1                = { "#abb2bf", 145, "mono_1" }     -- hsl(@syntax-hue, 14%, 71%);
+	mono_2                = { "#828997", 102, "mono_2" }     -- hsl(@syntax-hue,  9%, 55%);
+	mono_3                = { "#5c6370", 59, "mono_3" }      -- hsl(@syntax-hue, 10%, 40%);
+	mono_4                = { "#4b5263", 240, "mono_4" }     --
+	hue_1                 = { "#56b6c2", 247, "hue_1" }      -- hsl(187, 47%, 55%);
+	hue_2                 = { "#61afef", 75, "hue_2" }       -- hsl(207, 82%, 66%);
+	hue_3                 = { "#c678dd", 176, "hue_3" }      -- hsl(286, 60%, 67%);
+	hue_4                 = { "#98c379", 114, "hue_4" }      -- hsl( 95, 38%, 62%);
+	hue_5                 = { "#e06c75", 168, "hue_5" }      -- hsl(355, 65%, 65%);
+	hue_5_2               = { "#be5046", 131, "hue_5_2" }    -- hsl(  5, 48%, 51%);
+	hue_6                 = { "#d19a66", 247, "hue_6" }      -- hsl( 29, 54%, 61%);
+	hue_6_2               = { "#e5c07b", 180, "hue_6_2" }    -- hsl( 39, 67%, 69%);
+	syntax_bg             = { "#282c34", 17, "syntax_bg" }   -- hsl(@syntax-hue, @syntax-saturation, @syntax-brightness);
 	syntax_gutter         = { "#636d83", 241, "syntax_gutter" } -- darken(@syntax-fg, 26%);
 	syntax_cursor         = { "#2c323c", 23, "syntax_cursor" }
 	syntax_accent         = { "#528bff", 69, "syntax_accent" } -- hsl(@syntax-hue, 100%, 66% );
@@ -35,32 +35,32 @@ if vim.o.background == "dark" then
 	term_cyan             = { "#56b6c2", 247, "term_cyan" }
 	term_white            = { "#dcdfe4", 188, "term_white" }
 	term_8                = { "#5d677a", 242, "term_8" }
-	syntax_color_added    = { "#43d08a", 78, "syntax_color_added" } -- hsl(150,  60%, 54%);
-	syntax_color_modified = { "#e0c285", 250, "syntax_color_modified" } -- hsl(40,   60%, 70%);
-	syntax_color_removed  = { "#e05252", 244, "syntax_color_removed" } -- hsl(0,    70%, 60%);
+	syntax_color_added    = { "#43d08a", 78, "syntax_color_added" }  -- hsl(150,  60%, 54%);
+	syntax_color_modified = { "#e0c285", 250, "syntax_color_modified" } -- hsl(40,	 60%, 70%);
+	syntax_color_removed  = { "#e05252", 244, "syntax_color_removed" } -- hsl(0,	70%, 60%);
 else
 	--[[
-         Light Colors
-         @syntax-hue:          230;
-         @syntax-saturation:   1%;
-         @syntax-brightness:   98%;
-         @syntax-fg:     @mono-1;
-         @syntax-gutter-background-color-selected: darken(@syntax-bg, 8%);
-         for color in $(cat colors/one-nvim.vim | head -n 79 | tail -n 28 | cut -d '#' -f2 | cut -d '"' -f1); do hex2xterm $color | grep 'Hexadecimal\|xterm256'; done
-    --]]
-	mono_1                = { "#383A42", 59, "mono_1" }  -- hsl(@syntax-hue, 8%, 24%);
-	mono_2                = { "#696c77", 60, "mono_2" }  -- hsl(@syntax-hue, 6%, 44%);
-	mono_3                = { "#a0a1a7", 247, "mono_3" } -- hsl(@syntax-hue, 4%, 64%);
-	mono_4                = { "#c2c2c3", 251, "mono_4" } --
-	hue_1                 = { "#0184bc", 31, "hue_1" }   -- hsl(198, 99%, 37%);
-	hue_2                 = { "#4078f2", 69, "hue_2" }   -- hsl(221, 87%, 60%);
-	hue_3                 = { "#a626a4", 243, "hue_3" }  -- hsl(301, 63%, 40%);
-	hue_4                 = { "#50a14f", 242, "hue_4" }  -- hsl(119, 34%, 47%);
-	hue_5                 = { "#e45649", 244, "hue_5" }  -- hsl(  5, 74%, 59%);
-	hue_5_2               = { "#ca1243", 241, "hue_5_2" } -- hsl(344, 84%, 43%);
-	hue_6                 = { "#986801", 94, "hue_6" }   -- hsl(41, 99%, 30%);
-	hue_6_2               = { "#c18401", 242, "hue_6_2" } -- hsl(41, 99%, 38%)
-	syntax_bg             = { "#fafafa", 231, "syntax_bg" } -- hsl(@syntax-hue, @syntax-saturation, @syntax-brightness);
+		Light Colors
+		@syntax-hue                              : 230;
+		@syntax-saturation                       : 1%;
+		@syntax-brightness                       : 98%;
+		@syntax-fg                               : @mono-1;
+		@syntax-gutter-background-color-selected : darken(@syntax-bg, 8%);
+		for color in $(cat colors/one-nvim.vim | head -n 79 | tail -n 28 | cut -d '#' -f2 | cut -d '"' -f1); do hex2xterm $color | grep 'Hexadecimal\|xterm256'; done
+	--]]
+	mono_1                = { "#383A42", 59, "mono_1" }      -- hsl(@syntax-hue, 8%, 24%);
+	mono_2                = { "#696c77", 60, "mono_2" }      -- hsl(@syntax-hue, 6%, 44%);
+	mono_3                = { "#a0a1a7", 247, "mono_3" }     -- hsl(@syntax-hue, 4%, 64%);
+	mono_4                = { "#c2c2c3", 251, "mono_4" }     --
+	hue_1                 = { "#0184bc", 31, "hue_1" }       -- hsl(198, 99%, 37%);
+	hue_2                 = { "#4078f2", 69, "hue_2" }       -- hsl(221, 87%, 60%);
+	hue_3                 = { "#a626a4", 243, "hue_3" }      -- hsl(301, 63%, 40%);
+	hue_4                 = { "#50a14f", 242, "hue_4" }      -- hsl(119, 34%, 47%);
+	hue_5                 = { "#e45649", 244, "hue_5" }      -- hsl(  5, 74%, 59%);
+	hue_5_2               = { "#ca1243", 241, "hue_5_2" }    -- hsl(344, 84%, 43%);
+	hue_6                 = { "#986801", 94, "hue_6" }       -- hsl(41, 99%, 30%);
+	hue_6_2               = { "#c18401", 242, "hue_6_2" }    -- hsl(41, 99%, 38%)
+	syntax_bg             = { "#fafafa", 231, "syntax_bg" }  -- hsl(@syntax-hue, @syntax-saturation, @syntax-brightness);
 	syntax_gutter         = { "#9e9e9e", 247, "syntax_gutter" } -- darken(@syntax-bg, 36%);
 	syntax_cursor         = { "#f0f0f0", 255, "syntax_cursor" }
 	syntax_accent         = { "#526fff", 246, "syntax_accent" } -- hsl(@syntax-hue, 100%, 66% );
@@ -73,8 +73,8 @@ else
 	term_cyan             = { "#0997b3", 243, "term_cyan" }
 	term_white            = { "#fafafa", 231, "term_white" }
 	term_8                = { "#4f525e", 240, "term_8" }
-	syntax_color_added    = { "#2db448", 65, "syntax_color_added" } -- hsl(132,  60%, 44%);
-	syntax_color_modified = { "#f2a60d", 137, "syntax_color_modified" } -- hsl(40,   90%, 50%);
+	syntax_color_added    = { "#2db448", 65, "syntax_color_added" }  -- hsl(132,  60%, 44%);
+	syntax_color_modified = { "#f2a60d", 137, "syntax_color_modified" } -- hsl(40,	 90%, 50%);
 	syntax_color_removed  = { "#ff1414", 88, "syntax_color_removed" } -- hsl(0,    100%, 54%);
 end
 
@@ -84,8 +84,8 @@ syntax_color_renamed = { "#33a0ff", 75, "syntax_color_renamed" } -- hsl(208, 100
 
 -- Vim Primary Colors
 --[[
-    Mentioned here https://github.com/Th3Whit3Wolf/onebuddy/pull/7
-    vim-startify and maybe more plugins rely on these colors
+	Mentioned here https://github.com/Th3Whit3Wolf/onebuddy/pull/7
+	vim-startify and maybe more plugins rely on these colors
 --]]
 Red         = { "#e88388", 174, "Red" }
 DarkRed     = { "#e06c75", 168, "DarkRed" }
@@ -607,7 +607,7 @@ local highlight_groups = {
 	NormalFloating                       = { bg = none },
 
 	-----------------------------
-	--    LSP Highlighting    --
+	--	  LSP Highlighting	  --
 	-----------------------------
 	LspDiagnosticsDefaultError           = { fg = hue_5 },
 	LspDiagnosticsDefaultWarning         = { fg = hue_6_2 },
@@ -677,7 +677,7 @@ local highlight_groups = {
 	TSStrong                             = 'bold',
 	TSTag                                = 'Label',
 	TSTagDelimiter                       = 'Label',
-	-- TSText               = { fg = hue_6_2 },
+	-- TSText				= { fg = hue_6_2 },
 	TSTitle                              = 'Title',
 	TSType                               = 'Type',
 	TSTypeBuiltin                        = 'Type',
@@ -685,6 +685,7 @@ local highlight_groups = {
 	TSURI                                = 'Underlined',
 	TSVariableBuiltin                    = 'Special',
 
+	-- Treesitter
 	["@annotation"]                      = "PreProc",
 	["@attribute"]                       = "PreProc",
 	["@boolean"]                         = "Boolean",
