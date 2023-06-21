@@ -38,6 +38,7 @@ if vim.o.background == "dark" then
 	syntax_color_added    = { "#2e8f38", 78, "syntax_color_added" }  -- hsl(150,  60%, 54%);
 	syntax_color_modified = { "#ce931b", 250, "syntax_color_modified" } -- hsl(40,	 60%, 70%);
 	syntax_color_removed  = { "#a73636", 244, "syntax_color_removed" } -- hsl(0,	70%, 60%);
+	tree_context_bg       = { "#3e444f", 240, "tree_context_bg" }
 else
 	--[[
 		Light Colors
@@ -76,6 +77,7 @@ else
 	syntax_color_added    = { "#a1f1ae", 65, "syntax_color_added" }
 	syntax_color_modified = { "#f8d286", 137, "syntax_color_modified" }
 	syntax_color_removed  = { "#ffaeae", 88, "syntax_color_removed" }
+	tree_context_bg       = { "#eeeeee", 240, "tree_context_bg" }
 end
 
 -- Common
@@ -598,8 +600,8 @@ local highlight_groups = {
 	NERDTreeFile                         = { fg = mono_1 },
 
 	-- TreesitterContext border
-	TreesitterContext                    = { bg = mono_4 },
-	TreesitterContextBottom              = { bg = mono_4, style = "underline", guisp = mono_1 },
+	TreesitterContext                    = { bg = tree_context_bg },
+	TreesitterContextBottom              = { bg = tree_context_bg, style = "underline", guisp = mono_1 },
 
 	-- Coc.nvim
 	CocFloating                          = { bg = none },
