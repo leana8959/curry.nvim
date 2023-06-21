@@ -608,6 +608,10 @@ local highlight_groups = {
 -- Neovim NERDTree Background fix
      NERDTreeFile = { fg = mono_1 },
 
+-- TreesitterContext border
+    TreesitterContext = { bg=mono_4 },
+    TreesitterContextBottom = { bg=mono_4, style="underline", guisp=mono_1 },
+
 -- Coc.nvim
 CocFloating = { bg = none },
 NormalFloating = { bg = none },
