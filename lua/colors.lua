@@ -35,9 +35,9 @@ if vim.o.background == "dark" then
 	term_cyan             = { "#56b6c2", 247, "term_cyan" }
 	term_white            = { "#dcdfe4", 188, "term_white" }
 	term_8                = { "#5d677a", 242, "term_8" }
-	syntax_color_added    = { "#43d08a", 78, "syntax_color_added" }  -- hsl(150,  60%, 54%);
-	syntax_color_modified = { "#e0c285", 250, "syntax_color_modified" } -- hsl(40,	 60%, 70%);
-	syntax_color_removed  = { "#e05252", 244, "syntax_color_removed" } -- hsl(0,	70%, 60%);
+	syntax_color_added    = { "#2e8f38", 78, "syntax_color_added" }  -- hsl(150,  60%, 54%);
+	syntax_color_modified = { "#ce931b", 250, "syntax_color_modified" } -- hsl(40,	 60%, 70%);
+	syntax_color_removed  = { "#a73636", 244, "syntax_color_removed" } -- hsl(0,	70%, 60%);
 else
 	--[[
 		Light Colors
@@ -73,9 +73,9 @@ else
 	term_cyan             = { "#0997b3", 243, "term_cyan" }
 	term_white            = { "#fafafa", 231, "term_white" }
 	term_8                = { "#4f525e", 240, "term_8" }
-	syntax_color_added    = { "#2db448", 65, "syntax_color_added" }  -- hsl(132,  60%, 44%);
-	syntax_color_modified = { "#f2a60d", 137, "syntax_color_modified" } -- hsl(40,	 90%, 50%);
-	syntax_color_removed  = { "#ff1414", 88, "syntax_color_removed" } -- hsl(0,    100%, 54%);
+	syntax_color_added    = { "#a1f1ae", 65, "syntax_color_added" }
+	syntax_color_modified = { "#f8d286", 137, "syntax_color_modified" }
+	syntax_color_removed  = { "#ffaeae", 88, "syntax_color_removed" }
 end
 
 -- Common
@@ -229,12 +229,11 @@ local highlight_groups = {
 	-----------------------
 	-- Diff Highlighting --
 	-----------------------
-	-- FIXME: too bright
-	DiffAdd                              = { fg = syntax_color_added },
-	DiffAdded                            = { fg = syntax_color_added },
-	DiffChange                           = { fg = syntax_color_modified },
-	DiffDelete                           = { fg = syntax_color_removed },
-	DiffRemoved                          = { fg = syntax_color_removed },
+	DiffAdd                              = { bg = syntax_color_added },
+	DiffAdded                            = { bg = syntax_color_added },
+	DiffChange                           = { bg = syntax_color_modified },
+	DiffDelete                           = { bg = syntax_color_removed },
+	DiffRemoved                          = { bg = syntax_color_removed },
 
 	---------------------------
 	-- Filetype Highlighting --
