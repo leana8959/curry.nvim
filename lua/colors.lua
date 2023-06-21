@@ -222,7 +222,7 @@ local highlight_groups = {
 	Underlined                           = { fg = none, style = 'underline' },
 	Ignore                               = { fg = none },
 	Error                                = { fg = hue_5, bg = mono_3, style = 'bold' },
-	Todo                                 = { fg = hue_3, bg = mono_3 },
+	Todo                                 = { fg = syntax_accent },
 
 	-----------------------
 	-- Diff Highlighting --
