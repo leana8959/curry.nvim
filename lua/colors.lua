@@ -35,9 +35,12 @@ if vim.o.background == "dark" then
 	term_cyan             = { "#56b6c2", 247, "term_cyan" }
 	term_white            = { "#dcdfe4", 188, "term_white" }
 	term_8                = { "#5d677a", 242, "term_8" }
-	syntax_color_added    = { "#2e8f38", 78, "syntax_color_added" }  -- hsl(150,  60%, 54%);
-	syntax_color_modified = { "#ce931b", 250, "syntax_color_modified" } -- hsl(40,	 60%, 70%);
-	syntax_color_removed  = { "#a73636", 244, "syntax_color_removed" } -- hsl(0,	70%, 60%);
+	syntax_color_added    = { "#43d08a", 78, "syntax_color_added" }  -- hsl(150,  60%, 54%);
+	syntax_color_modified = { "#e0c285", 250, "syntax_color_modified" } -- hsl(40,   60%, 70%);
+	syntax_color_removed  = { "#e05252", 244, "syntax_color_removed" } -- hsl(0,    70%, 60%);
+	git_diff_added        = { "#2e8f38", 78, "git_diff_added" }
+	git_diff_modified     = { "#ce931b", 250, "git_diff_modified" }
+	git_diff_removed      = { "#a73636", 244, "git_diff_removed" }
 	tree_context_bg       = { "#3e444f", 240, "tree_context_bg" }
 else
 	--[[
@@ -74,9 +77,12 @@ else
 	term_cyan             = { "#0997b3", 243, "term_cyan" }
 	term_white            = { "#fafafa", 231, "term_white" }
 	term_8                = { "#4f525e", 240, "term_8" }
-	syntax_color_added    = { "#a1f1ae", 65, "syntax_color_added" }
-	syntax_color_modified = { "#f8d286", 137, "syntax_color_modified" }
-	syntax_color_removed  = { "#ffaeae", 88, "syntax_color_removed" }
+	syntax_color_added    = { "#2db448", 65, "syntax_color_added" }  -- hsl(132,  60%, 44%);
+	syntax_color_modified = { "#f2a60d", 137, "syntax_color_modified" } -- hsl(40,   90%, 50%);
+	syntax_color_removed  = { "#ff1414", 88, "syntax_color_removed" } -- hsl(0,    100%, 54%);
+	git_diff_added        = { "#a1f1ae", 65, "git_diff_added" }
+	git_diff_modified     = { "#f8d286", 137, "git_diff_modified" }
+	git_diff_removed      = { "#ffaeae", 88, "git_diff_removed" }
 	tree_context_bg       = { "#eeeeee", 240, "tree_context_bg" }
 end
 
@@ -231,11 +237,11 @@ local highlight_groups = {
 	-----------------------
 	-- Diff Highlighting --
 	-----------------------
-	DiffAdd                              = { bg = syntax_color_added },
-	DiffAdded                            = { bg = syntax_color_added },
-	DiffChange                           = { bg = syntax_color_modified },
-	DiffDelete                           = { bg = syntax_color_removed },
-	DiffRemoved                          = { bg = syntax_color_removed },
+	DiffAdd                              = { bg = git_diff_added },
+	DiffAdded                            = { bg = git_diff_added },
+	DiffChange                           = { bg = git_diff_modified },
+	DiffDelete                           = { bg = git_diff_removed },
+	DiffRemoved                          = { bg = git_diff_removed },
 
 	---------------------------
 	-- Filetype Highlighting --
