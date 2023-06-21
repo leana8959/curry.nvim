@@ -228,16 +228,6 @@ local highlight_groups = {
 -----------------------
 -- Diff Highlighting --
 -----------------------
-
-     -- DiffAdd     = { fg = syntax_color_added, bg = visual_grey},
-     -- DiffChange  = { fg = syntax_color_modified, bg = visual_grey},
-     -- DiffDelete  = { fg = syntax_color_removed, bg = visual_grey},
-     -- DiffText    = { fg = hue_2, bg = visual_grey},
-     -- DiffAdded   = { fg = hue_4, bg = visual_grey},
-     -- DiffFile    = { fg = hue_5, bg = visual_grey},
-     -- DiffNewFile = { fg = hue_4, bg = visual_grey},
-     -- DiffLine    = { fg = hue_2, bg = visual_grey},
-     -- DiffRemoved = { fg = hue_5, bg = visual_grey},
      DiffAdd     = { fg = syntax_color_added },
      DiffAdded   = { fg = syntax_color_added },
      DiffChange  = { fg = syntax_color_modified },
@@ -474,7 +464,6 @@ local highlight_groups = {
      markdownH1               = { fg = hue_5 },
      markdownH2               = { fg = hue_5 },
      markdownH3               = { fg = hue_5 },
-     markdownH3               = { fg = hue_5 },
      markdownH4               = { fg = hue_5 },
      markdownH5               = { fg = hue_5 },
      markdownH6               = { fg = hue_5 },
@@ -510,7 +499,6 @@ local highlight_groups = {
      pythonBuiltin         = { fg = hue_1 },
      pythonStatement       = { fg = hue_3 },
      pythonParam           = { fg = hue_6 },
-     pythonEscape          = { fg = hue_5 },
      pythonSelf            = { fg = mono_2, style = 'italic'},
      pythonClass           = { fg = hue_2 },
      pythonOperator        = { fg = hue_3 },
@@ -613,41 +601,39 @@ local highlight_groups = {
     TreesitterContextBottom = { bg=mono_4, style="underline", guisp=mono_1 },
 
 -- Coc.nvim
-CocFloating = { bg = none },
-NormalFloating = { bg = none },
+    CocFloating = { bg = none },
+    NormalFloating = { bg = none },
 
 -----------------------------
 --     LSP Highlighting    --
 -----------------------------
-
-LspDiagnosticsDefaultError           = { fg = hue_5 },
-LspDiagnosticsDefaultWarning         = { fg = hue_6_2 },
-LspDiagnosticsDefaultInformation     = { fg = hue_1 },
-LspDiagnosticsDefaultHint            = { fg = hue_4 },
-LspDiagnosticsVirtualTextError       = { fg = hue_5 },
-LspDiagnosticsVirtualTextWarning     = { fg = hue_6_2 },
-LspDiagnosticsVirtualTextInformation = { fg = hue_1 },
-LspDiagnosticsVirtualTextHint        = { fg = hue_4 },
-LspDiagnosticsUnderlineError         = { fg = hue_5 , style = 'underline' },
-LspDiagnosticsUnderlineWarning       = { fg = hue_6_2 , style = 'underline' },
-LspDiagnosticsUnderlineInformation   = { fg = hue_1 , style = 'underline' },
-LspDiagnosticsUnderlineHint          = { fg = hue_4 , style = 'underline' },
-LspDiagnosticsFloatingError          = { fg = hue_5 , bg = pmenu },
-LspDiagnosticsFloatingWarning        = { fg = hue_6_2 , bg = pmenu },
-LspDiagnosticsFloatingInformation    = { fg = hue_1 , bg = pmenu },
-LspDiagnosticsFloatingHint           = { fg = hue_4 , bg = pmenu },
-LspDiagnosticsSignError              = { fg = hue_5 },
-LspDiagnosticsSignWarning            = { fg = hue_6_2 },
-LspDiagnosticsSignInformation        = { fg = hue_1 },
-LspDiagnosticsSignHint               = { fg = hue_4 },
-LspReferenceText                     = { style = 'reverse' },
-LspReferenceRead                     = { style = 'reverse' },
-LspReferenceWrite                    = { fg = hue_6_2, style = 'reverse' },
+    LspDiagnosticsDefaultError           = { fg = hue_5 },
+    LspDiagnosticsDefaultWarning         = { fg = hue_6_2 },
+    LspDiagnosticsDefaultInformation     = { fg = hue_1 },
+    LspDiagnosticsDefaultHint            = { fg = hue_4 },
+    LspDiagnosticsVirtualTextError       = { fg = hue_5 },
+    LspDiagnosticsVirtualTextWarning     = { fg = hue_6_2 },
+    LspDiagnosticsVirtualTextInformation = { fg = hue_1 },
+    LspDiagnosticsVirtualTextHint        = { fg = hue_4 },
+    LspDiagnosticsUnderlineError         = { fg = hue_5 , style = 'underline' },
+    LspDiagnosticsUnderlineWarning       = { fg = hue_6_2 , style = 'underline' },
+    LspDiagnosticsUnderlineInformation   = { fg = hue_1 , style = 'underline' },
+    LspDiagnosticsUnderlineHint          = { fg = hue_4 , style = 'underline' },
+    LspDiagnosticsFloatingError          = { fg = hue_5 , bg = pmenu },
+    LspDiagnosticsFloatingWarning        = { fg = hue_6_2 , bg = pmenu },
+    LspDiagnosticsFloatingInformation    = { fg = hue_1 , bg = pmenu },
+    LspDiagnosticsFloatingHint           = { fg = hue_4 , bg = pmenu },
+    LspDiagnosticsSignError              = { fg = hue_5 },
+    LspDiagnosticsSignWarning            = { fg = hue_6_2 },
+    LspDiagnosticsSignInformation        = { fg = hue_1 },
+    LspDiagnosticsSignHint               = { fg = hue_4 },
+    LspReferenceText                     = { style = 'reverse' },
+    LspReferenceRead                     = { style = 'reverse' },
+    LspReferenceWrite                    = { fg = hue_6_2, style = 'reverse' },
 
 -----------------------------
 -- TreeSitter Highlighting --
 -----------------------------
-
      TSAnnotation         = 'PreProc',
      TSAttribute          = 'PreProc',
      TSBoolean            = 'Boolean',
