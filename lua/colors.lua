@@ -223,6 +223,8 @@ local highlight_groups = {
 	Ignore                               = { fg = none },
 	Error                                = { fg = hue_5, bg = mono_3, style = 'bold' },
 	Todo                                 = { fg = syntax_accent },
+	TodoChecked                          = { fg = syntax_accent },
+	TodoUnchecked                        = { fg = syntax_accent, style = 'bold' },
 
 	-----------------------
 	-- Diff Highlighting --
@@ -748,6 +750,8 @@ local highlight_groups = {
 	["@text.uri"]                        = "Underlined",
 	["@text.warning"]                    = "Todo",
 	["@text.todo"]                       = "Todo",
+	["@text.todo.checked"]               = "TodoChecked",
+	["@text.todo.unchecked"]             = "TodoUnchecked",
 	["@type"]                            = "Type",
 	["@type.builtin"]                    = "Type",
 	["@type.definition"]                 = "Typedef",
