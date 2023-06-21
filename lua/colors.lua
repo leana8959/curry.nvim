@@ -2,14 +2,14 @@ vim.g.colors_name = "one-nvim"
 
 if vim.o.background == "dark" then
 	--[[
-         Dark Colors
-         @syntax-hue:          220;
-         @syntax-saturation:   13%;
-         @syntax-brightness:   18%;
-         @syntax-fg:     @mono-1;
-         @syntax-gutter-background-color-selected: lighten(@syntax-bg, 8%);
-         for color in $(cat colors/one-nvim.vim | head -n 41 | tail -n 28 | cut -d '#' -f2 | cut -d '"' -f1); do hex2xterm $color | grep 'Hexadecimal\|xterm256'; done
-    --]]
+		Dark Colors
+		@syntax-hue                              : 220;
+		@syntax-saturation                       : 13%;
+		@syntax-brightness                       : 18%;
+		@syntax-fg                               : @mono-1;
+		@syntax-gutter-background-color-selected : lighten(@syntax-bg, 8%);
+		for color in $(cat colors/one-nvim.vim | head -n 41 | tail -n 28 | cut -d '#' -f2 | cut -d '"' -f1); do hex2xterm $color | grep 'Hexadecimal\|xterm256'; done
+	--]]
 	mono_1                = { "#abb2bf", 145, "mono_1" }     -- hsl(@syntax-hue, 14%, 71%);
 	mono_2                = { "#828997", 102, "mono_2" }     -- hsl(@syntax-hue,  9%, 55%);
 	mono_3                = { "#5c6370", 59, "mono_3" }      -- hsl(@syntax-hue, 10%, 40%);
@@ -36,18 +36,18 @@ if vim.o.background == "dark" then
 	term_white            = { "#dcdfe4", 188, "term_white" }
 	term_8                = { "#5d677a", 242, "term_8" }
 	syntax_color_added    = { "#43d08a", 78, "syntax_color_added" }  -- hsl(150,  60%, 54%);
-	syntax_color_modified = { "#e0c285", 250, "syntax_color_modified" } -- hsl(40,   60%, 70%);
-	syntax_color_removed  = { "#e05252", 244, "syntax_color_removed" } -- hsl(0,    70%, 60%);
+	syntax_color_modified = { "#e0c285", 250, "syntax_color_modified" } -- hsl(40,	 60%, 70%);
+	syntax_color_removed  = { "#e05252", 244, "syntax_color_removed" } -- hsl(0,	70%, 60%);
 else
 	--[[
-         Light Colors
-         @syntax-hue:          230;
-         @syntax-saturation:   1%;
-         @syntax-brightness:   98%;
-         @syntax-fg:     @mono-1;
-         @syntax-gutter-background-color-selected: darken(@syntax-bg, 8%);
-         for color in $(cat colors/one-nvim.vim | head -n 79 | tail -n 28 | cut -d '#' -f2 | cut -d '"' -f1); do hex2xterm $color | grep 'Hexadecimal\|xterm256'; done
-    --]]
+		Light Colors
+		@syntax-hue                              : 230;
+		@syntax-saturation                       : 1%;
+		@syntax-brightness                       : 98%;
+		@syntax-fg                               : @mono-1;
+		@syntax-gutter-background-color-selected : darken(@syntax-bg, 8%);
+		for color in $(cat colors/one-nvim.vim | head -n 79 | tail -n 28 | cut -d '#' -f2 | cut -d '"' -f1); do hex2xterm $color | grep 'Hexadecimal\|xterm256'; done
+	--]]
 	mono_1                = { "#383A42", 59, "mono_1" }      -- hsl(@syntax-hue, 8%, 24%);
 	mono_2                = { "#696c77", 60, "mono_2" }      -- hsl(@syntax-hue, 6%, 44%);
 	mono_3                = { "#a0a1a7", 247, "mono_3" }     -- hsl(@syntax-hue, 4%, 64%);
@@ -74,7 +74,7 @@ else
 	term_white            = { "#fafafa", 231, "term_white" }
 	term_8                = { "#4f525e", 240, "term_8" }
 	syntax_color_added    = { "#2db448", 65, "syntax_color_added" }  -- hsl(132,  60%, 44%);
-	syntax_color_modified = { "#f2a60d", 137, "syntax_color_modified" } -- hsl(40,   90%, 50%);
+	syntax_color_modified = { "#f2a60d", 137, "syntax_color_modified" } -- hsl(40,	 90%, 50%);
 	syntax_color_removed  = { "#ff1414", 88, "syntax_color_removed" } -- hsl(0,    100%, 54%);
 end
 
@@ -84,8 +84,8 @@ syntax_color_renamed = { "#33a0ff", 75, "syntax_color_renamed" } -- hsl(208, 100
 
 -- Vim Primary Colors
 --[[
-    Mentioned here https://github.com/Th3Whit3Wolf/onebuddy/pull/7
-    vim-startify and maybe more plugins rely on these colors
+	Mentioned here https://github.com/Th3Whit3Wolf/onebuddy/pull/7
+	vim-startify and maybe more plugins rely on these colors
 --]]
 Red         = { "#e88388", 174, "Red" }
 DarkRed     = { "#e06c75", 168, "DarkRed" }
@@ -222,7 +222,9 @@ local highlight_groups = {
 	Underlined                           = { fg = none, style = 'underline' },
 	Ignore                               = { fg = none },
 	Error                                = { fg = hue_5, bg = mono_3, style = 'bold' },
-	Todo                                 = { fg = hue_3, bg = mono_3 },
+	Todo                                 = { fg = syntax_accent },
+	TodoChecked                          = { fg = syntax_accent },
+	TodoUnchecked                        = { fg = syntax_accent, style = 'bold' },
 
 	-----------------------
 	-- Diff Highlighting --
@@ -605,7 +607,7 @@ local highlight_groups = {
 	NormalFloating                       = { bg = none },
 
 	-----------------------------
-	--    LSP Highlighting    --
+	--	  LSP Highlighting	  --
 	-----------------------------
 	LspDiagnosticsDefaultError           = { fg = hue_5 },
 	LspDiagnosticsDefaultWarning         = { fg = hue_6_2 },
@@ -675,7 +677,7 @@ local highlight_groups = {
 	TSStrong                             = 'bold',
 	TSTag                                = 'Label',
 	TSTagDelimiter                       = 'Label',
-	-- TSText               = { fg = hue_6_2 },
+	-- TSText				= { fg = hue_6_2 },
 	TSTitle                              = 'Title',
 	TSType                               = 'Type',
 	TSTypeBuiltin                        = 'Type',
@@ -683,6 +685,7 @@ local highlight_groups = {
 	TSURI                                = 'Underlined',
 	TSVariableBuiltin                    = 'Special',
 
+	-- Treesitter
 	["@annotation"]                      = "PreProc",
 	["@attribute"]                       = "PreProc",
 	["@boolean"]                         = "Boolean",
@@ -744,10 +747,18 @@ local highlight_groups = {
 	["@text.strike"]                     = { style = "strikethrough", },
 	["@text.strong"]                     = { style = "bold" },
 	["@text.title"]                      = "Title",
+	["@text.title.1"]                    = "markdownH1",
+	["@text.title.2"]                    = "markdownH2",
+	["@text.title.3"]                    = "markdownH3",
+	["@text.title.4"]                    = "markdownH4",
+	["@text.title.5"]                    = "markdownH5",
+	["@text.title.6"]                    = "markdownH6",
 	["@text.underline"]                  = { underline = true, },
 	["@text.uri"]                        = "Underlined",
 	["@text.warning"]                    = "Todo",
 	["@text.todo"]                       = "Todo",
+	["@text.todo.checked"]               = "TodoChecked",
+	["@text.todo.unchecked"]             = "TodoUnchecked",
 	["@type"]                            = "Type",
 	["@type.builtin"]                    = "Type",
 	["@type.definition"]                 = "Typedef",
