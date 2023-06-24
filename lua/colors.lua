@@ -604,8 +604,8 @@ local highlight_groups = {
 	NERDTreeFile                         = { fg = mono_1 },
 
 	-- TreesitterContext border
-	TreesitterContext                    = { bg = mono_4 },
-	TreesitterContextBottom              = { bg = mono_4, style = "underline", guisp = mono_1 },
+	TreesitterContext                    = { bg = tree_context_bg },
+	TreesitterContextBottom              = { bg = tree_context_bg, style = "underline", guisp = mono_1 },
 
 	-- Coc.nvim
 	CocFloating                          = { bg = none },
