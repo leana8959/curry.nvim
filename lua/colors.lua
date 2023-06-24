@@ -611,6 +611,25 @@ local highlight_groups = {
 	CocFloating                          = { bg = none },
 	NormalFloating                       = { bg = none },
 
+	-- fugitive
+	fugitiveUntrackedModifier            = "Text",
+	fugitiveUntrackedSection             = { fg = mono_2 },
+	fugitiveUntrackedHeading             = { fg = mono_2 },
+	fugitiveUnstagedModifier             = "Text",
+	fugitiveUnstagedHeading              = { fg = hue_6_2 },
+	fugitiveStagedModifier               = "Text",
+	fugitiveStagedHeading                = { fg = hue_2 },
+	fugitiveSymbolicRef                  = "Identifier",
+	fugitiveInstruction                  = "Text",
+	fugitiveHelpHeader                   = "Help",
+	fugitiveModifier                     = "Operator",
+	fugitiveHelpTag                      = "Tag",
+	fugitiveHeading                      = "Text",
+	fugitiveHeader                       = "Text",
+	fugitiveCount                        = "Number",
+	fugitiveStop                         = "Text",
+	fugitiveHash                         = "Identifier",
+
 	-----------------------------
 	--    LSP Highlighting    --
 	-----------------------------
