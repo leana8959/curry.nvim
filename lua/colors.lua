@@ -356,12 +356,12 @@ local highlight_groups = {
 	SignifySignAdd                       = { fg = syntax_color_added },
 	SignifySignChange                    = { fg = syntax_color_modified },
 	SignifySignDelete                    = { fg = syntax_color_removed },
-	GitGutterAdd                         = 'SignifySignAdd',
-	GitGutterChange                      = 'SignifySignChange',
-	GitGutterDelete                      = 'SignifySignDelete',
-	GitSignsAdd                          = 'SignifySignAdd',
-	GitSignsChange                       = 'SignifySignChange',
-	GitSignsDelete                       = 'SignifySignDelete',
+	GitGutterAdd                         = { bg = syntax_color_added_bg },
+	GitGutterChange                      = { bg = syntax_color_modified_bg },
+	GitGutterDelete                      = { bg = syntax_color_removed_bg },
+	GitSignsAdd                          = { bg = syntax_color_added_bg },
+	GitSignsChange                       = { bg = syntax_color_modified_bg },
+	GitSignsDelete                       = { bg = syntax_color_removed_bg },
 
 	-- Go
 	goDeclaration                        = { fg = hue_3 },
