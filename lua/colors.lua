@@ -357,9 +357,11 @@ local highlight_groups = {
 	SignifySignAdd                       = { fg = syntax_color_added },
 	SignifySignChange                    = { fg = syntax_color_modified },
 	SignifySignDelete                    = { fg = syntax_color_removed },
-	GitGutterAdd                         = { bg = syntax_color_added_bg },
-	GitGutterChange                      = { bg = syntax_color_modified_bg },
-	GitGutterDelete                      = { bg = syntax_color_removed_bg },
+	-- Lualine
+	GitGutterAdd                         = { fg = syntax_color_added },
+	GitGutterChange                      = { fg = syntax_color_modified },
+	GitGutterDelete                      = { fg = syntax_color_removed },
+	-- GitSigns
 	GitSignsAdd                          = { bg = syntax_color_added_bg },
 	GitSignsChange                       = { bg = syntax_color_modified_bg },
 	GitSignsDelete                       = { bg = syntax_color_removed_bg },
