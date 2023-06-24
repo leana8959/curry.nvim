@@ -777,7 +777,7 @@ local highlight_groups = {
 	["@type"]                            = "Type",
 	["@type.builtin"]                    = "Type",
 	["@type.definition"]                 = "Typedef",
-	["@type.qualifier"]                  = "@keyword",
+	["@type.qualifier"]                  = { style = "bold" },
 	["@variable.builtin"]                = "Special",
 }
 
