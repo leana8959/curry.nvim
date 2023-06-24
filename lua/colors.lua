@@ -718,6 +718,9 @@ local highlight_groups = {
 	TelescopeSelection                   = { fg = hue_5_2, bg = visual_grey },
 	TelescopeSelectionCaret              = { fg = hue_5_2 },
 	TelescopeMatching                    = { fg = hue_2, style = "bold" },
+	TelescopePromptTitle                 = { style = "reverse" },
+	TelescopeResultsTitle                = { style = "reverse" },
+	TelescopePreviewTitle                = { style = "reverse" },
 
 	-- Lazy
 	-- https://github.com/folke/lazy.nvim#-highlight-groups
