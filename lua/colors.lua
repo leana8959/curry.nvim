@@ -210,7 +210,7 @@ local highlight_groups = {
 	Repeat                               = { fg = hue_3, bg = none },
 	Label                                = { fg = hue_3, bg = none },
 	Operator                             = { fg = syntax_accent },
-	Keyword                              = { fg = none, bg = none },
+	Keyword                              = { fg = hue_5, bg = none },
 	Parameter                            = { fg = hue_5_2, bg = none },
 	Exception                            = { fg = hue_3, bg = none },
 	PreProc                              = { fg = hue_6_2, bg = none },
@@ -795,8 +795,7 @@ local highlight_groups = {
 	["@type"]                            = "Type",
 	["@type.builtin"]                    = "Type",
 	["@type.definition"]                 = "Typedef",
-	["@type.qualifier"]                  = { style = "bold" },
-	["@variable.builtin"]                = "Special",
+	["@type.qualifier"]                  = { fg = hue_5, style = "bold" },
 }
 
 local terminal_ansi_colors = {
