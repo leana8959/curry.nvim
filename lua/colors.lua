@@ -205,7 +205,7 @@ local highlight_groups = {
 	Keyword                              = { fg = hue_5, bg = none },
 	Exception                            = { fg = hue_3, bg = none },
 	PreProc                              = { fg = hue_6_2, bg = none },
-	Include                              = { fg = hue_2, bg = none },
+	Include                              = { fg = hue_3, bg = none },
 	Define                               = { fg = hue_3, bg = none },
 	Macro                                = { fg = hue_3, bg = none },
 	PreCondit                            = { fg = hue_6_2, bg = none },
