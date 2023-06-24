@@ -802,7 +802,7 @@ local highlight_groups = {
 	["@label"]                           = "Label",
 	["@method"]                          = "Function",
 	["@method.call"]                     = "@method",
-	["@namespace"]                       = "Include",
+	["@namespace"]                       = "Structure",
 	["@none"]                            = { fg = none, bg = none },
 	["@number"]                          = "Number",
 	["@operator"]                        = "Operator",
