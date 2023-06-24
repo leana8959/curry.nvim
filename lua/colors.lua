@@ -712,6 +712,13 @@ local highlight_groups = {
 	TSURI                                = 'Underlined',
 	TSVariableBuiltin                    = 'Special',
 
+	-- Telescope
+	TelescopeNormal                      = "NormalFloat",
+	TelescopeBorder                      = "FloatBorder",
+	TelescopeSelection                   = { fg = hue_5_2, bg = visual_grey },
+	TelescopeSelectionCaret              = { fg = hue_5_2 },
+	TelescopeMatching                    = { fg = hue_2, style = "bold" },
+
 	["@lsp.type.class"]                  = "Structure",
 	["@lsp.type.comment"]                = "Comment",
 	["@lsp.type.decorator"]              = "Macro",
