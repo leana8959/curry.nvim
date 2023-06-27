@@ -366,6 +366,7 @@ local highlight_groups = {
 	GitSignsAdd                          = { bg = syntax_color_added_bg },
 	GitSignsChange                       = { bg = syntax_color_modified_bg },
 	GitSignsDelete                       = { bg = syntax_color_removed_bg },
+	GitSignsCurrentLineBlame             = { fg = mono_2, style = "italic" },
 
 	-- Go
 	goDeclaration                        = { fg = hue_3 },
@@ -660,6 +661,18 @@ local highlight_groups = {
 	LspReferenceText                     = { style = 'reverse' },
 	LspReferenceRead                     = { style = 'reverse' },
 	LspReferenceWrite                    = { fg = hue_6_2, style = 'reverse' },
+
+	-- Diagnostics
+	DiagnosticError                      = { fg = hue_5_2 },
+	DiagnosticWarn                       = { fg = hue_5 },
+	DiagnosticInfo                       = { fg = syntax_accent },
+	DiagnosticHint                       = { fg = mono_2 },
+	DiagnosticSignError                  = "DiagnosticError",
+	DiagnosticSignWarn                   = "DiagnosticWarn",
+	DiagnosticSignInfo                   = "DiagnosticInfo",
+	DiagnosticSignHint                   = "DiagnosticHint",
+	DiagnosticUnnecessary                = { style = "italic" },
+	DiagnosticDeprecated                 = { style = "italic" },
 
 	-----------------------------
 	-- TreeSitter Highlighting --
