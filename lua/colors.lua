@@ -362,6 +362,7 @@ local highlight_groups = {
 	GitGutterChange                      = { fg = syntax_color_modified },
 	GitGutterDelete                      = { fg = syntax_color_removed },
 	-- GitSigns
+	GitSignsUntracked                    = { fg = mono_3 },
 	GitSignsAdd                          = { bg = syntax_color_added_bg },
 	GitSignsChange                       = { bg = syntax_color_modified_bg },
 	GitSignsDelete                       = { bg = syntax_color_removed_bg },
