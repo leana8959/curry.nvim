@@ -146,7 +146,7 @@ local highlight_groups = {
 	Cursor                               = { fg = none, bg = syntax_accent },
 	CursorIM                             = { fg = none },
 	CursorColumn                         = { fg = none, bg = syntax_cursor },
-	CursorLine                           = { fg = none, bg = none },
+	CursorLine                           = { fg = none, bg = syntax_cursor },
 	Directory                            = { fg = hue_2 },
 	ErrorMsg                             = { fg = hue_5, bg = syntax_bg },
 	VertSplit                            = { fg = vertsplit },
