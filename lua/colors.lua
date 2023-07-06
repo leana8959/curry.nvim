@@ -2,88 +2,88 @@ vim.g.colors_name = "one-nvim"
 
 if vim.o.background == "dark" then
 	--[[
-		Dark Colors
-		@syntax-hue                              : 220;
-		@syntax-saturation                       : 13%;
-		@syntax-brightness                       : 18%;
-		@syntax-fg                               : @mono-1;
-		@syntax-gutter-background-color-selected : lighten(@syntax-bg, 8%);
-		for color in $(cat colors/one-nvim.vim | head -n 41 | tail -n 28 | cut -d '#' -f2 | cut -d '"' -f1); do hex2xterm $color | grep 'Hexadecimal\|xterm256'; done
-	--]]
-	mono_1                = { "#abb2bf", 145, "mono_1" }     -- hsl(@syntax-hue, 14%, 71%);
-	mono_2                = { "#828997", 102, "mono_2" }     -- hsl(@syntax-hue,  9%, 55%);
-	mono_3                = { "#5c6370", 59, "mono_3" }      -- hsl(@syntax-hue, 10%, 40%);
-	mono_4                = { "#4b5263", 240, "mono_4" }     --
-	hue_1                 = { "#56b6c2", 247, "hue_1" }      -- hsl(187, 47%, 55%);
-	hue_2                 = { "#61afef", 75, "hue_2" }       -- hsl(207, 82%, 66%);
-	hue_3                 = { "#c678dd", 176, "hue_3" }      -- hsl(286, 60%, 67%);
-	hue_4                 = { "#98c379", 114, "hue_4" }      -- hsl( 95, 38%, 62%);
-	hue_5                 = { "#e06c75", 168, "hue_5" }      -- hsl(355, 65%, 65%);
-	hue_5_2               = { "#be5046", 131, "hue_5_2" }    -- hsl(  5, 48%, 51%);
-	hue_6                 = { "#d19a66", 247, "hue_6" }      -- hsl( 29, 54%, 61%);
-	hue_6_2               = { "#e5c07b", 180, "hue_6_2" }    -- hsl( 39, 67%, 69%);
-	syntax_bg             = { "#282c34", 17, "syntax_bg" }   -- hsl(@syntax-hue, @syntax-saturation, @syntax-brightness);
-	syntax_gutter         = { "#636d83", 241, "syntax_gutter" } -- darken(@syntax-fg, 26%);
-	syntax_cursor         = { "#2c323c", 23, "syntax_cursor" }
-	syntax_accent         = { "#528bff", 69, "syntax_accent" } -- hsl(@syntax-hue, 100%, 66% );
-	vertsplit             = { "#181a1f", 234, "vertsplit" }
-	special_grey          = { "#3b4048", 238, "special_grey" }
-	visual_grey           = { "#3e4452", 59, "visual_grey" }
-	pmenu                 = { "#333841", 59, "pmenu" }
-	term_black            = { "#282c34", 17, "term_black" }
-	term_blue             = { "#61afef", 75, "term_blue" }
-	term_cyan             = { "#56b6c2", 247, "term_cyan" }
-	term_white            = { "#dcdfe4", 188, "term_white" }
-	term_8                = { "#5d677a", 242, "term_8" }
-	syntax_color_added    = { "#43d08a", 78, "syntax_color_added" }  -- hsl(150,  60%, 54%);
-	syntax_color_modified = { "#e0c285", 250, "syntax_color_modified" } -- hsl(40,   60%, 70%);
-	syntax_color_removed  = { "#e05252", 244, "syntax_color_removed" } -- hsl(0,    70%, 60%);
-	git_diff_added        = { "#2e8f38", 78, "git_diff_added" }
-	git_diff_modified     = { "#ce931b", 250, "git_diff_modified" }
-	git_diff_removed      = { "#a73636", 244, "git_diff_removed" }
-	tree_context_bg       = { "#3e444f", 240, "tree_context_bg" }
+         Dark Colors
+         @syntax-hue:          220;
+         @syntax-saturation:   13%;
+         @syntax-brightness:   18%;
+         @syntax-fg:     @mono-1;
+         @syntax-gutter-background-color-selected: lighten(@syntax-bg, 8%);
+         for color in $(cat colors/one-nvim.vim | head -n 41 | tail -n 28 | cut -d '#' -f2 | cut -d '"' -f1); do hex2xterm $color | grep 'Hexadecimal\|xterm256'; done
+    --]]
+	mono_1                   = { "#abb2bf", 145, "mono_1" } -- hsl(@syntax-hue, 14%, 71%);
+	mono_2                   = { "#828997", 102, "mono_2" } -- hsl(@syntax-hue,  9%, 55%);
+	mono_3                   = { "#5c6370", 59, "mono_3" }  -- hsl(@syntax-hue, 10%, 40%);
+	mono_4                   = { "#4b5263", 240, "mono_4" } --
+	hue_1                    = { "#56b6c2", 247, "hue_1" }  -- hsl(187, 47%, 55%);
+	hue_2                    = { "#61afef", 75, "hue_2" }   -- hsl(207, 82%, 66%);
+	hue_3                    = { "#c678dd", 176, "hue_3" }  -- hsl(286, 60%, 67%);
+	hue_4                    = { "#98c379", 114, "hue_4" }  -- hsl( 95, 38%, 62%);
+	hue_5                    = { "#e06c75", 168, "hue_5" }  -- hsl(355, 65%, 65%);
+	hue_5_2                  = { "#be5046", 131, "hue_5_2" } -- hsl(  5, 48%, 51%);
+	hue_6                    = { "#d19a66", 247, "hue_6" }  -- hsl( 29, 54%, 61%);
+	hue_6_2                  = { "#e5c07b", 180, "hue_6_2" } -- hsl( 39, 67%, 69%);
+	syntax_bg                = { "#282c34", 17, "syntax_bg" } -- hsl(@syntax-hue, @syntax-saturation, @syntax-brightness);
+	syntax_gutter            = { "#636d83", 241, "syntax_gutter" } -- darken(@syntax-fg, 26%);
+	syntax_cursor            = { "#2c323c", 23, "syntax_cursor" }
+	syntax_accent            = { "#528bff", 69, "syntax_accent" } -- hsl(@syntax-hue, 100%, 66% );
+	vertsplit                = { "#181a1f", 234, "vertsplit" }
+	special_grey             = { "#3b4048", 238, "special_grey" }
+	visual_grey              = { "#3e4452", 59, "visual_grey" }
+	pmenu                    = { "#333841", 59, "pmenu" }
+	term_black               = { "#282c34", 17, "term_black" }
+	term_blue                = { "#61afef", 75, "term_blue" }
+	term_cyan                = { "#56b6c2", 247, "term_cyan" }
+	term_white               = { "#dcdfe4", 188, "term_white" }
+	term_8                   = { "#5d677a", 242, "term_8" }
+	syntax_color_added       = { "#43d08a", 78, "syntax_color_added" } -- hsl(150,  60%, 54%);
+	syntax_color_modified    = { "#e0c285", 250, "syntax_color_modified" } -- hsl(40,   60%, 70%);
+	syntax_color_removed     = { "#e05252", 244, "syntax_color_removed" } -- hsl(0,    70%, 60%);
+	syntax_color_added_bg    = { "#2e8f38", 78, "syntax_color_added_bg" }
+	syntax_color_modified_bg = { "#ce931b", 250, "syntax_color_modified_bg" }
+	syntax_color_removed_bg  = { "#a73636", 244, "syntax_color_removed_bg" }
+	tinted_bg                = { "#3e444f", 240, "tinted_bg" }
 else
 	--[[
-		Light Colors
-		@syntax-hue                              : 230;
-		@syntax-saturation                       : 1%;
-		@syntax-brightness                       : 98%;
-		@syntax-fg                               : @mono-1;
-		@syntax-gutter-background-color-selected : darken(@syntax-bg, 8%);
-		for color in $(cat colors/one-nvim.vim | head -n 79 | tail -n 28 | cut -d '#' -f2 | cut -d '"' -f1); do hex2xterm $color | grep 'Hexadecimal\|xterm256'; done
-	--]]
-	mono_1                = { "#383A42", 59, "mono_1" }      -- hsl(@syntax-hue, 8%, 24%);
-	mono_2                = { "#696c77", 60, "mono_2" }      -- hsl(@syntax-hue, 6%, 44%);
-	mono_3                = { "#a0a1a7", 247, "mono_3" }     -- hsl(@syntax-hue, 4%, 64%);
-	mono_4                = { "#c2c2c3", 251, "mono_4" }     --
-	hue_1                 = { "#0184bc", 31, "hue_1" }       -- hsl(198, 99%, 37%);
-	hue_2                 = { "#4078f2", 69, "hue_2" }       -- hsl(221, 87%, 60%);
-	hue_3                 = { "#a626a4", 243, "hue_3" }      -- hsl(301, 63%, 40%);
-	hue_4                 = { "#50a14f", 242, "hue_4" }      -- hsl(119, 34%, 47%);
-	hue_5                 = { "#e45649", 244, "hue_5" }      -- hsl(  5, 74%, 59%);
-	hue_5_2               = { "#ca1243", 241, "hue_5_2" }    -- hsl(344, 84%, 43%);
-	hue_6                 = { "#986801", 94, "hue_6" }       -- hsl(41, 99%, 30%);
-	hue_6_2               = { "#c18401", 242, "hue_6_2" }    -- hsl(41, 99%, 38%)
-	syntax_bg             = { "#fafafa", 231, "syntax_bg" }  -- hsl(@syntax-hue, @syntax-saturation, @syntax-brightness);
-	syntax_gutter         = { "#9e9e9e", 247, "syntax_gutter" } -- darken(@syntax-bg, 36%);
-	syntax_cursor         = { "#f0f0f0", 255, "syntax_cursor" }
-	syntax_accent         = { "#526fff", 246, "syntax_accent" } -- hsl(@syntax-hue, 100%, 66% );
-	vertsplit             = { "#e7e9e1", 254, "vertsplit" }
-	special_grey          = { "#d3d3d3", 252, "special_grey" }
-	visual_grey           = { "#d0d0d0", 252, "visual_grey" }
-	pmenu                 = { "#dfdfdf", 254, "pmenu" }
-	term_black            = { "#383a42", 237, "term_black" }
-	term_blue             = { "#0184bc", 31, "term_blue" }
-	term_cyan             = { "#0997b3", 243, "term_cyan" }
-	term_white            = { "#fafafa", 231, "term_white" }
-	term_8                = { "#4f525e", 240, "term_8" }
-	syntax_color_added    = { "#2db448", 65, "syntax_color_added" }  -- hsl(132,  60%, 44%);
-	syntax_color_modified = { "#f2a60d", 137, "syntax_color_modified" } -- hsl(40,   90%, 50%);
-	syntax_color_removed  = { "#ff1414", 88, "syntax_color_removed" } -- hsl(0,    100%, 54%);
-	git_diff_added        = { "#a1f1ae", 65, "git_diff_added" }
-	git_diff_modified     = { "#f8d286", 137, "git_diff_modified" }
-	git_diff_removed      = { "#ffaeae", 88, "git_diff_removed" }
-	tree_context_bg       = { "#eeeeee", 240, "tree_context_bg" }
+         Light Colors
+         @syntax-hue:          230;
+         @syntax-saturation:   1%;
+         @syntax-brightness:   98%;
+         @syntax-fg:     @mono-1;
+         @syntax-gutter-background-color-selected: darken(@syntax-bg, 8%);
+         for color in $(cat colors/one-nvim.vim | head -n 79 | tail -n 28 | cut -d '#' -f2 | cut -d '"' -f1); do hex2xterm $color | grep 'Hexadecimal\|xterm256'; done
+    --]]
+	mono_1                   = { "#383A42", 59, "mono_1" }  -- hsl(@syntax-hue, 8%, 24%);
+	mono_2                   = { "#696c77", 60, "mono_2" }  -- hsl(@syntax-hue, 6%, 44%);
+	mono_3                   = { "#a0a1a7", 247, "mono_3" } -- hsl(@syntax-hue, 4%, 64%);
+	mono_4                   = { "#c2c2c3", 251, "mono_4" } --
+	hue_1                    = { "#0184bc", 31, "hue_1" }   -- hsl(198, 99%, 37%);
+	hue_2                    = { "#4078f2", 69, "hue_2" }   -- hsl(221, 87%, 60%);
+	hue_3                    = { "#a626a4", 243, "hue_3" }  -- hsl(301, 63%, 40%);
+	hue_4                    = { "#50a14f", 242, "hue_4" }  -- hsl(119, 34%, 47%);
+	hue_5                    = { "#e45649", 244, "hue_5" }  -- hsl(  5, 74%, 59%);
+	hue_5_2                  = { "#ca1243", 241, "hue_5_2" } -- hsl(344, 84%, 43%);
+	hue_6                    = { "#986801", 94, "hue_6" }   -- hsl(41, 99%, 30%);
+	hue_6_2                  = { "#c18401", 242, "hue_6_2" } -- hsl(41, 99%, 38%)
+	syntax_bg                = { "#fafafa", 231, "syntax_bg" } -- hsl(@syntax-hue, @syntax-saturation, @syntax-brightness);
+	syntax_gutter            = { "#9e9e9e", 247, "syntax_gutter" } -- darken(@syntax-bg, 36%);
+	syntax_cursor            = { "#f0f0f0", 255, "syntax_cursor" }
+	syntax_accent            = { "#526fff", 246, "syntax_accent" } -- hsl(@syntax-hue, 100%, 66% );
+	vertsplit                = { "#e7e9e1", 254, "vertsplit" }
+	special_grey             = { "#d3d3d3", 252, "special_grey" }
+	visual_grey              = { "#d0d0d0", 252, "visual_grey" }
+	pmenu                    = { "#dfdfdf", 254, "pmenu" }
+	term_black               = { "#383a42", 237, "term_black" }
+	term_blue                = { "#0184bc", 31, "term_blue" }
+	term_cyan                = { "#0997b3", 243, "term_cyan" }
+	term_white               = { "#fafafa", 231, "term_white" }
+	term_8                   = { "#4f525e", 240, "term_8" }
+	syntax_color_added       = { "#2db448", 65, "syntax_color_added" } -- hsl(132,  60%, 44%);
+	syntax_color_modified    = { "#f2a60d", 137, "syntax_color_modified" } -- hsl(40,   90%, 50%);
+	syntax_color_removed     = { "#ff1414", 88, "syntax_color_removed" } -- hsl(0,    100%, 54%);
+	syntax_color_added_bg    = { "#a1f1ae", 65, "syntax_color_added_bg" }
+	syntax_color_modified_bg = { "#f8d286", 137, "syntax_color_modified_bg" }
+	syntax_color_removed_bg  = { "#ffaeae", 88, "syntax_color_removed_bg" }
+	tinted_bg                = { "#eeeeee", 240, "tinted_bg" }
 end
 
 -- Common
@@ -139,7 +139,7 @@ local highlight_groups = {
 	-- Syntax Groups (descriptions and ordering from `:h w18`) --
 	-------------------------------------------------------------
 	Normal                               = normal,
-	NormalFloat                          = normal,
+	NormalFloat                          = { fg = mono_1, bg = tinted_bg },
 	bold                                 = { style = 'bold' },
 	ColorColumn                          = { fg = none, bg = syntax_cursor },
 	Conceal                              = { fg = mono_4, bg = syntax_bg },
@@ -150,12 +150,12 @@ local highlight_groups = {
 	Directory                            = { fg = hue_2 },
 	ErrorMsg                             = { fg = hue_5, bg = syntax_bg },
 	VertSplit                            = { fg = vertsplit },
-	FloatBorder                          = { fg = mono_1, bg = none },
+	FloatBorder                          = { fg = mono_1, bg = tinted_bg },
 	Folded                               = { fg = mono_3, bg = syntax_bg },
 	FoldColumn                           = { fg = mono_3, bg = syntax_cursor },
 	IncSearch                            = { fg = hue_6, bg = mono_3 },
 	LineNr                               = { fg = mono_4 },
-	CursorLineNr                         = { fg = mono_1, bg = syntax_cursor },
+	CursorLineNr                         = { fg = mono_1, style = "bold" },
 	MatchParen                           = { fg = hue_5, bg = syntax_cursor, style = 'underline,bold' },
 	Italic                               = { fg = none, style = 'italic' },
 	ModeMsg                              = { fg = mono_1 },
@@ -211,9 +211,10 @@ local highlight_groups = {
 	Label                                = { fg = hue_3, bg = none },
 	Operator                             = { fg = syntax_accent },
 	Keyword                              = { fg = hue_5, bg = none },
+	Parameter                            = { fg = hue_5_2, bg = none },
 	Exception                            = { fg = hue_3, bg = none },
 	PreProc                              = { fg = hue_6_2, bg = none },
-	Include                              = { fg = hue_2, bg = none },
+	Include                              = { fg = hue_3, bg = none },
 	Define                               = { fg = hue_3, bg = none },
 	Macro                                = { fg = hue_3, bg = none },
 	PreCondit                            = { fg = hue_6_2, bg = none },
@@ -237,11 +238,11 @@ local highlight_groups = {
 	-----------------------
 	-- Diff Highlighting --
 	-----------------------
-	DiffAdd                              = { bg = git_diff_added },
-	DiffAdded                            = { bg = git_diff_added },
-	DiffChange                           = { bg = git_diff_modified },
-	DiffDelete                           = { bg = git_diff_removed },
-	DiffRemoved                          = { bg = git_diff_removed },
+	DiffAdd                              = { bg = syntax_color_added_bg },
+	DiffAdded                            = { bg = syntax_color_added_bg },
+	DiffChange                           = { bg = syntax_color_modified_bg },
+	DiffDelete                           = { bg = syntax_color_removed_bg },
+	DiffRemoved                          = { bg = syntax_color_removed_bg },
 
 	---------------------------
 	-- Filetype Highlighting --
@@ -358,12 +359,16 @@ local highlight_groups = {
 	SignifySignAdd                       = { fg = syntax_color_added },
 	SignifySignChange                    = { fg = syntax_color_modified },
 	SignifySignDelete                    = { fg = syntax_color_removed },
-	GitGutterAdd                         = 'SignifySignAdd',
-	GitGutterChange                      = 'SignifySignChange',
-	GitGutterDelete                      = 'SignifySignDelete',
-	GitSignsAdd                          = 'SignifySignAdd',
-	GitSignsChange                       = 'SignifySignChange',
-	GitSignsDelete                       = 'SignifySignDelete',
+	-- Lualine
+	GitGutterAdd                         = { fg = syntax_color_added },
+	GitGutterChange                      = { fg = syntax_color_modified },
+	GitGutterDelete                      = { fg = syntax_color_removed },
+	-- GitSigns
+	GitSignsUntracked                    = { fg = mono_3 },
+	GitSignsAdd                          = { bg = syntax_color_added_bg },
+	GitSignsChange                       = { bg = syntax_color_modified_bg },
+	GitSignsDelete                       = { bg = syntax_color_removed_bg },
+	GitSignsCurrentLineBlame             = { fg = mono_2, style = "italic" },
 
 	-- Go
 	goDeclaration                        = { fg = hue_3 },
@@ -606,12 +611,31 @@ local highlight_groups = {
 	NERDTreeFile                         = { fg = mono_1 },
 
 	-- TreesitterContext border
-	TreesitterContext                    = { bg = tree_context_bg },
-	TreesitterContextBottom              = { bg = tree_context_bg, style = "underline", guisp = mono_1 },
+	TreesitterContext                    = { bg = tinted_bg },
+	TreesitterContextBottom              = { bg = tinted_bg, style = "underline", guisp = mono_1 },
 
 	-- Coc.nvim
 	CocFloating                          = { bg = none },
 	NormalFloating                       = { bg = none },
+
+	-- fugitive
+	fugitiveUntrackedModifier            = "Text",
+	fugitiveUntrackedSection             = { fg = mono_2 },
+	fugitiveUntrackedHeading             = { fg = mono_2 },
+	fugitiveUnstagedModifier             = "Text",
+	fugitiveUnstagedHeading              = { fg = hue_6_2 },
+	fugitiveStagedModifier               = "Text",
+	fugitiveStagedHeading                = { fg = hue_2 },
+	fugitiveSymbolicRef                  = "Identifier",
+	fugitiveInstruction                  = "Text",
+	fugitiveHelpHeader                   = "Help",
+	fugitiveModifier                     = "Operator",
+	fugitiveHelpTag                      = "Tag",
+	fugitiveHeading                      = "Text",
+	fugitiveHeader                       = "Text",
+	fugitiveCount                        = "Number",
+	fugitiveStop                         = "Text",
+	fugitiveHash                         = "Identifier",
 
 	-----------------------------
 	--	  LSP Highlighting	  --
@@ -639,6 +663,18 @@ local highlight_groups = {
 	LspReferenceText                     = { style = 'reverse' },
 	LspReferenceRead                     = { style = 'reverse' },
 	LspReferenceWrite                    = { fg = hue_6_2, style = 'reverse' },
+
+	-- Diagnostics
+	DiagnosticError                      = { fg = hue_5_2 },
+	DiagnosticWarn                       = { fg = hue_5 },
+	DiagnosticInfo                       = { fg = syntax_accent },
+	DiagnosticHint                       = { fg = mono_2 },
+	DiagnosticSignError                  = "DiagnosticError",
+	DiagnosticSignWarn                   = "DiagnosticWarn",
+	DiagnosticSignInfo                   = "DiagnosticInfo",
+	DiagnosticSignHint                   = "DiagnosticHint",
+	DiagnosticUnnecessary                = { style = "italic" },
+	DiagnosticDeprecated                 = { style = "italic" },
 
 	-----------------------------
 	-- TreeSitter Highlighting --
@@ -692,7 +728,67 @@ local highlight_groups = {
 	TSURI                                = 'Underlined',
 	TSVariableBuiltin                    = 'Special',
 
-	-- Treesitter
+	-- Telescope
+	TelescopeNormal                      = "NormalFloat",
+	TelescopeBorder                      = "FloatBorder",
+	TelescopeSelection                   = { fg = hue_5_2, bg = visual_grey },
+	TelescopeSelectionCaret              = { fg = hue_5_2 },
+	TelescopeMatching                    = { fg = hue_2, style = "bold" },
+	TelescopePromptTitle                 = { style = "reverse" },
+	TelescopeResultsTitle                = { style = "reverse" },
+	TelescopePreviewTitle                = { style = "reverse" },
+
+	-- Lazy
+	-- https://github.com/folke/lazy.nvim#-highlight-groups
+	LazyButton                           = "CursorLine",
+	LazyButtonActive                     = "Visual",
+	LazyComment                          = "Comment",
+	LazyCommit                           = "@variable.builtin",
+	LazyCommitIssue                      = "Number",
+	LazyCommitScope                      = "Italic",
+	LazyCommitType                       = "Title",
+	LazyDimmed                           = "Conceal",
+	LazyDir                              = "@text.reference",
+	LazyH1                               = { fg = "mono_1", style = "reverse" },
+	LazyH2                               = "Bold",
+	LazyLocal                            = "Constant",
+	LazyNoCond                           = "DiagnosticWarn",
+	LazyNormal                           = "NormalFloat",
+	LazyProgressDone                     = "Constant",
+	LazyProgressTodo                     = "LineNr",
+	LazyProp                             = "Conceal",
+	LazyReasonCmd                        = "Operator",
+	LazyReasonEvent                      = "Constant",
+	LazyReasonFt                         = "Character",
+	LazyReasonImport                     = "Identifier",
+	LazyReasonKeys                       = "Statement",
+	LazyReasonPlugin                     = "Special",
+	LazyReasonRuntime                    = "@macro",
+	LazyReasonSource                     = "Character",
+	LazyReasonStart                      = "@field",
+	LazySpecial                          = "@punctuation.special",
+	LazyTaskError                        = "ErrorMsg",
+	LazyTaskOutput                       = "MsgArea",
+	LazyUrl                              = "@text.reference",
+	LazyValue                            = "@string",
+
+	["@lsp.type.class"]                  = "Structure",
+	["@lsp.type.comment"]                = "Comment",
+	["@lsp.type.decorator"]              = "Macro",
+	["@lsp.type.enum"]                   = "Enum",
+	["@lsp.type.enumMember"]             = "Constant",
+	["@lsp.type.function"]               = "Function",
+	["@lsp.type.interface"]              = "Structure",
+	["@lsp.type.macro"]                  = "Macro",
+	["@lsp.type.method"]                 = "Function",
+	["@lsp.type.namespace"]              = "Structure",
+	["@lsp.type.parameter"]              = "Parameter",
+	["@lsp.type.property"]               = "Identifier",
+	["@lsp.type.struct"]                 = "Structure",
+	["@lsp.type.type"]                   = "Type",
+	["@lsp.type.typeParameter"]          = "Parameter",
+	-- ["@lsp.type.variable"]      = { style = "italic" },
+
 	["@annotation"]                      = "PreProc",
 	["@attribute"]                       = "PreProc",
 	["@boolean"]                         = "Boolean",
@@ -722,17 +818,18 @@ local highlight_groups = {
 	["@label"]                           = "Label",
 	["@method"]                          = "Function",
 	["@method.call"]                     = "@method",
-	["@namespace"]                       = "Include",
+	["@namespace"]                       = "Structure",
 	["@none"]                            = { fg = none, bg = none },
 	["@number"]                          = "Number",
 	["@operator"]                        = "Operator",
-	["@parameter"]                       = "Identifier",
+	["@parameter"]                       = "Parameter",
 	["@preproc"]                         = "PreProc",
 	["@property"]                        = "Identifier",
 	["@punctuation.bracket"]             = "Delimiter",
 	["@punctuation.delimiter"]           = "Delimiter",
 	["@punctuation.special"]             = "Delimiter",
 	["@repeat"]                          = "Repeat",
+	["@spell"]                           = "Text",
 	["@storageclass"]                    = "StorageClass",
 	["@string"]                          = "String",
 	["@string.escape"]                   = "SpecialChar",
@@ -750,7 +847,7 @@ local highlight_groups = {
 	["@text.literal"]                    = "String",
 	["@text.math"]                       = "Special",
 	["@text.note"]                       = "SpecialComment",
-	["@text.reference"]                  = "Constant",
+	["@text.reference"]                  = "Identifier",
 	["@text.strike"]                     = { style = "strikethrough", },
 	["@text.strong"]                     = { style = "bold" },
 	["@text.title"]                      = "Title",
@@ -763,14 +860,12 @@ local highlight_groups = {
 	["@text.underline"]                  = { underline = true, },
 	["@text.uri"]                        = "Underlined",
 	["@text.warning"]                    = "Todo",
-	["@text.todo"]                       = "Todo",
-	["@text.todo.checked"]               = "TodoChecked",
-	["@text.todo.unchecked"]             = "TodoUnchecked",
+	["@text.todo.checked"]               = { fg = hue_2 },
+	["@text.todo.unchecked"]             = { fg = hue_2, style = "bold" },
 	["@type"]                            = "Type",
 	["@type.builtin"]                    = "Type",
 	["@type.definition"]                 = "Typedef",
-	["@type.qualifier"]                  = "@keyword",
-	["@variable.builtin"]                = "Special",
+	["@type.qualifier"]                  = { fg = hue_5, style = "bold" },
 }
 
 local terminal_ansi_colors = {
