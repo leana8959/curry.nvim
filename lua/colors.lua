@@ -196,7 +196,7 @@ local highlight_groups = {
 	-- Standard Syntax Highlighting --
 	----------------------------------
 
-	Comment                              = { fg = mono_3, style = 'italic' },
+	Comment                              = { fg = mono_3 },
 	Constant                             = { fg = hue_4, bg = none },
 	String                               = { fg = hue_4, bg = none },
 	Character                            = { fg = hue_4, bg = none },
@@ -663,6 +663,7 @@ local highlight_groups = {
 	LspReferenceText                     = { style = 'reverse' },
 	LspReferenceRead                     = { style = 'reverse' },
 	LspReferenceWrite                    = { fg = hue_6_2, style = 'reverse' },
+	LspCodeLens                          = { fg = mono_3, style = "italic" },
 
 	-- Diagnostics
 	DiagnosticError                      = { fg = hue_5_2 },
