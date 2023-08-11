@@ -845,7 +845,7 @@ local highlight_groups = {
 	["@text.emphasis"]                   = { style = "italic", },
 	["@text.environment"]                = "Macro",
 	["@text.environment.name"]           = "Type",
-	["@text.literal"]                    = "String",
+	["@text.literal"]                    = "@none",
 	["@text.math"]                       = "Special",
 	["@text.note"]                       = "SpecialComment",
 	["@text.reference"]                  = "Identifier",
