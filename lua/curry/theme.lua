@@ -80,7 +80,7 @@ local highlight_groups = {
   StorageClass                             = { fg = c.gold, bg = "NONE" },
   Structure                                = { fg = c.gold, bg = "NONE" },
   Typedef                                  = { fg = c.gold, bg = "NONE" },
-  Special                                  = { fg = c.blue, bg = "NONE" },
+  Special                                  = { fg = c.purple, bg = "NONE" },
   SpecialChar                              = { fg = "NONE", bg = "NONE" },
   Tag                                      = { fg = "NONE", bg = "NONE" },
   Delimiter                                = { fg = "NONE", bg = "NONE" },
@@ -174,10 +174,10 @@ local highlight_groups = {
   -- }}}
 
   -- `:h spell` {{{
-  SpellBad                                 = { fg = "NONE", bg = "NONE", italic = true, underline = true },
-  SpellLocal                               = { fg = "NONE", bg = "NONE", italic = true, underline = true },
-  SpellCap                                 = { fg = "NONE", bg = "NONE", italic = true, underline = true },
-  SpellRare                                = { fg = "NONE", bg = "NONE", italic = true, underline = true },
+  SpellBad                                 = { fg = "NONE", bg = "NONE", italic = true, undercurl = true },
+  SpellLocal                               = { fg = "NONE", bg = "NONE", italic = true, undercurl = true },
+  SpellCap                                 = { fg = "NONE", bg = "NONE", italic = true, undercurl = true },
+  SpellRare                                = { fg = "NONE", bg = "NONE", italic = true, undercurl = true },
   -- }}}
 
   -- treesitter-context {{{
