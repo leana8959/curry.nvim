@@ -20,6 +20,7 @@ local highlight_groups = {
   DiffDelete                               = { fg = "NONE", bg = c.removed_bg },
   DiffRemoved                              = { fg = "NONE", bg = c.removed_bg },
   ErrorMsg                                 = { fg = c.red, bg = "NONE" },
+  WinSeparator                             = { fg = c.mono_3, bg = "NONE" },
   Folded                                   = { fg = "NONE", bg = c.tinted_bg },
   FoldColumn                               = { fg = c.mono_3, bg = c.cursor },
   SignColumn                               = { fg = "NONE", bg = "NONE" },
