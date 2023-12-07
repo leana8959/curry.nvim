@@ -11,7 +11,7 @@ local highlight_groups = {
   Cursor                                   = { fg = "NONE", bg = c.accent },
   CursorColumn                             = { fg = "NONE", bg = c.cursor },
   CursorIM                                 = { fg = "NONE", bg = "NONE" },
-  CursorLineNr                             = { fg = c.mono_1, bg = "NONE", bold = true },
+  CursorLineNr                             = { fg = c.fg, bg = "NONE", bold = true },
   Directory                                = { fg = c.blue, bg = "NONE" },
   DiffAdd                                  = { fg = "NONE", bg = c.added_bg },
   DiffAdded                                = { fg = "NONE", bg = c.added_bg },
@@ -28,12 +28,12 @@ local highlight_groups = {
   LineNr                                   = { fg = c.mono_4, bg = "NONE" },
   CursorLine                               = { fg = "NONE", bg = c.cursor },
   MatchParen                               = { fg = c.red, bg = c.cursor, underline = true, bold = true },
-  ModeMsg                                  = { fg = c.mono_1, bg = "NONE" },
-  MoreMsg                                  = { fg = c.mono_1, bg = "NONE" },
+  ModeMsg                                  = { fg = c.fg, bg = "NONE" },
+  MoreMsg                                  = { fg = c.fg, bg = "NONE" },
   NonText                                  = { fg = c.mono_3, bg = "NONE" },
   Normal                                   = { fg = c.fg, bg = c.bg },
-  NormalFloat                              = { fg = c.mono_1, bg = c.tinted_bg },
-  FloatBorder                              = { fg = c.mono_1, bg = c.tinted_bg },
+  NormalFloat                              = { fg = c.fg, bg = c.tinted_bg },
+  FloatBorder                              = { fg = c.fg, bg = c.tinted_bg },
   FloatTitle                               = { fg = "NONE", bg = "NONE", reverse = true },
   Pmenu                                    = { fg = "NONE", bg = c.pmenu },
   PmenuSel                                 = { fg = "NONE", bg = c.mono_4 },
@@ -42,17 +42,17 @@ local highlight_groups = {
   Question                                 = { fg = c.blue, bg = "NONE" },
   Search                                   = { fg = c.bg, bg = c.accent },
   SpecialKey                               = { fg = "NONE", bg = "NONE", bold = true },
-  StatusLine                               = { fg = c.mono_1, bg = c.cursor },
+  StatusLine                               = { fg = c.fg, bg = c.cursor },
   StatusLineNC                             = { fg = c.mono_3, bg = "NONE" },
   TabLine                                  = { fg = "NONE", bg = c.tinted_bg },
   TabLineFill                              = { fg = "NONE", bg = c.tinted_bg },
   TabLineSel                               = { fg = c.bg, bg = c.accent },
-  Title                                    = { fg = c.mono_1, bg = "NONE", bold = true },
+  Title                                    = { fg = c.fg, bg = "NONE", bold = true },
   Visual                                   = { fg = "NONE", bg = c.visual },
   VisualNOS                                = { fg = "NONE", bg = c.visual, italic = true },
   WarningMsg                               = { fg = c.orange, bg = "NONE" },
   Whitespace                               = { fg = c.mono_4, bg = "NONE" },
-  WildMenu                                 = { fg = c.mono_1, bg = c.mono_3 },
+  WildMenu                                 = { fg = c.fg, bg = c.mono_3 },
   -- }}}
 
   -- `:h group-name` {{{
@@ -187,7 +187,7 @@ local highlight_groups = {
 
   -- LSP {{{
   LspCodeLens                              = { fg = c.mono_3, bg = "NONE", italic = true },
-  LspCodeLensSeparator                     = { fg = c.mono_1, bg = "NONE" },
+  LspCodeLensSeparator                     = { fg = c.fg, bg = "NONE" },
   -- }}}
 
   -- Diagnostics {{{
@@ -214,8 +214,8 @@ local highlight_groups = {
   -- `:h cmp-highlight`
   CmpItemAbbr                              = { fg = "NONE", bg = "NONE" },
   CmpItemAbbrDeprecated                    = { fg = c.mono_3, bg = "NONE" },
-  CmpItemAbbrMatch                         = { fg = c.mono_1, bg = "NONE", bold = true },
-  CmpItemAbbrMatchFuzzy                    = { fg = c.mono_1, bg = "NONE", underline = true },
+  CmpItemAbbrMatch                         = { fg = c.fg, bg = "NONE", bold = true },
+  CmpItemAbbrMatchFuzzy                    = { fg = c.fg, bg = "NONE", underline = true },
   CmpItemKind                              = { fg = "NONE", bg = "NONE" },
   CmpItemKindKeyword                       = { link = "Keyword" },
   CmpItemKindVariable                      = { link = "Identifier" },
