@@ -117,6 +117,7 @@ local highlight_groups = {
   ["@label"]                               = { link = "Label" },
   ["@macro"]                               = { link = "Macro" },
   ["@method"]                              = { link = "Function" },
+  ["@module"]                              = { link = "Structure" },
   ["@namespace"]                           = { link = "Structure" },
   ["@number"]                              = { link = "Number" },
   ["@operator"]                            = { link = "Operator" },
