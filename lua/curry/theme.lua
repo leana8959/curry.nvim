@@ -106,6 +106,24 @@ local highlight_groups = {
 	["@type.qualifier"] = { fg = c.orange, bg = "NONE" },
 	["@type.qualifier.rust"] = { fg = c.orange, bg = "NONE", bold = true },
 
+	-- Treesitter markdown
+	["@text.title.1.marker.markdown"] = { fg = c.cyan, bg = "NONE" },
+	["@text.title.2.marker.markdown"] = { fg = c.cyan, bg = "NONE" },
+	["@text.title.3.marker.markdown"] = { fg = c.cyan, bg = "NONE" },
+	["@text.title.4.marker.markdown"] = { fg = c.cyan, bg = "NONE" },
+	["@text.title.5.marker.markdown"] = { fg = c.cyan, bg = "NONE" },
+	["@text.title.6.marker.markdown"] = { fg = c.cyan, bg = "NONE" },
+	["@text.title.1.markdown"] = { fg = c.blue },
+	["@text.title.2.markdown"] = { fg = c.blue },
+	["@text.title.3.markdown"] = { fg = c.blue },
+	["@text.title.4.markdown"] = { fg = c.blue },
+	["@text.title.5.markdown"] = { fg = c.blue },
+	["@text.title.6.markdown"] = { fg = c.blue },
+
+	["@text.literal.block.markdown"] = { fg = c.fg },
+
+	["@punctuation.special.markdown"] = { fg = c.brown },
+
 	-- }}}
 
 	-- LSP Semantic tokens  {{{
