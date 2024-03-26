@@ -93,55 +93,19 @@ local highlight_groups = {
 	-- }}}
 
 	-- `:h treesitter-highlight-group` {{{
-	["@boolean"] = { link = "Boolean" },
-	["@character"] = { link = "Character" },
-	["@character.special"] = { link = "SpecialChar" },
-	["@comment"] = { link = "Comment" },
-	["@conditional"] = { link = "Conditional" },
-	["@constant"] = { link = "Constant" },
-	["@constant.builtin"] = { link = "Special" },
-	["@constant.macro"] = { link = "Define" },
-	["@constructor"] = { link = "Special" },
-	["@debug"] = { link = "Debug" },
-	["@define"] = { link = "Define" },
-	["@exception"] = { link = "Exception" },
-	["@field"] = { fg = c.cyan, bg = "NONE" },
-	["@float"] = { link = "Float" },
-	["@function"] = { link = "Function" },
-	["@function.builtin"] = { link = "Special" },
-	["@function.macro"] = { link = "Macro" },
-	["@include"] = { link = "Include" },
-	["@keyword"] = { link = "Keyword" },
+
+	-- Default groups are respected.
+	-- Here's a list of overrides
+	-- To get a list of all possible groups
+	-- `rg --no-filename -o -g '**/highlights.scm' '^\s*?[^;].*? (@[^\s_)"]+?)[\s)]*$' -r '$1' | sort | uniq`
+
 	["@keyword.gitcommit"] = { link = "Function" },
-	["@label"] = { link = "Label" },
-	["@macro"] = { link = "Macro" },
-	["@method"] = { link = "Function" },
-	["@module"] = { link = "Structure" },
-	["@namespace"] = { link = "Structure" },
-	["@number"] = { link = "Number" },
-	["@operator"] = { link = "Operator" },
+	["@field"] = { fg = c.cyan, bg = "NONE" },
 	["@parameter"] = { fg = c.red, bg = "NONE" },
-	["@preproc"] = { link = "PreProc" },
 	["@property"] = { fg = c.cyan, bg = "NONE" },
-	["@punctuation"] = { link = "Delimiter" },
-	["@repeat"] = { link = "Repeat" },
-	["@storageclass"] = { link = "StorageClass" },
-	["@string"] = { link = "String" },
-	["@string.escape"] = { link = "SpecialChar" },
-	["@string.special"] = { link = "SpecialChar" },
-	["@structure"] = { link = "Structure" },
-	["@tag"] = { link = "Tag" },
-	["@text.literal"] = { link = "Comment" },
-	["@text.reference"] = { link = "Identifier" },
-	["@text.title"] = { link = "Title" },
-	["@text.todo"] = { link = "Todo" },
-	["@text.underline"] = { link = "Underlined" },
-	["@text.uri"] = { link = "Underlined" },
-	["@type"] = { link = "Type" },
-	["@type.definition"] = { link = "Typedef" },
 	["@type.qualifier"] = { fg = c.orange, bg = "NONE" },
 	["@type.qualifier.rust"] = { fg = c.orange, bg = "NONE", bold = true },
-	["@variable"] = { link = "Identifier" },
+
 	-- }}}
 
 	-- LSP Semantic tokens  {{{
