@@ -121,6 +121,7 @@ local highlight_groups = {
 	["@text.title.6.markdown"] = { fg = c.blue },
 
 	["@text.literal.block.markdown"] = { fg = c.fg },
+	["@text.literal.markdown_inline"] = { fg = c.purple },
 
 	["@punctuation.special.markdown"] = { fg = c.brown },
 
