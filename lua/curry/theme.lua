@@ -52,6 +52,8 @@ local highlight_groups = {
 	WarningMsg = { fg = c.orange, bg = "NONE" },
 	Whitespace = { fg = c.mono_4, bg = "NONE" },
 	WildMenu = { fg = c.fg, bg = c.mono_3 },
+    BufferCurrent = { fg = c.accent, bg = c.white},
+    BufferCurrentSign = {fg = c.accent, bg = c.white },
 	-- }}}
 
 	-- `:h group-name` {{{
@@ -490,7 +492,8 @@ local highlight_groups = {
 	pythonModule = { fg = c.purple, bg = "NONE" },
 	pythonStringDelimiter = { fg = c.green, bg = "NONE" },
 	pythonSymbol = { fg = c.cyan, bg = "NONE" },
-	-- }}}
+
+    -- }}}
 
 	-- {{{
 	rubyBlock = { fg = c.purple, bg = "NONE" },
