@@ -432,20 +432,25 @@ local highlight_groups = {
 	-- }}}
 
 	-- {{{
-	markdownUrl = { fg = c.mono_3, bg = "NONE", underline = true },
-	markdownBold = { fg = c.brown, bg = "NONE", bold = true },
-	markdownItalic = { fg = c.brown, bg = "NONE", italic = true },
-	markdownCode = { fg = c.green, bg = "NONE" },
-	markdownCodeBlock = { fg = c.orange, bg = "NONE" },
-	markdownCodeDelimiter = { fg = c.green, bg = "NONE" },
-	markdownHeadingDelimiter = { fg = c.red, bg = "NONE" },
-	markdownH1 = { fg = c.orange, bg = "NONE" },
-	markdownH2 = { fg = c.orange, bg = "NONE" },
-	markdownH3 = { fg = c.orange, bg = "NONE" },
-	markdownH4 = { fg = c.orange, bg = "NONE" },
-	markdownH5 = { fg = c.orange, bg = "NONE" },
-	markdownH6 = { fg = c.orange, bg = "NONE" },
-	markdownListMarker = { fg = c.orange, bg = "NONE" },
+	markdownItalic = { fg = c.fg, italic = true },
+	markdownBold = { fg = c.fg, bold = true },
+
+	markdownCode = { fg = c.purple, bg = "NONE" },
+	markdownCodeBlock = { fg = c.fg },
+	markdownCodeDelimiter = { fg = c.purple},
+
+	markdownLinkText = { link = "Identifier" },
+	markdownUrl = { fg = c.fg, underline = true },
+
+	markdownHeadingDelimiter = { fg = c.cyan, bg = "NONE" },
+	markdownH1 = { fg = c.blue, bg = "NONE" },
+	markdownH2 = { fg = c.blue, bg = "NONE" },
+	markdownH3 = { fg = c.blue, bg = "NONE" },
+	markdownH4 = { fg = c.blue, bg = "NONE" },
+	markdownH5 = { fg = c.blue, bg = "NONE" },
+	markdownH6 = { fg = c.blue, bg = "NONE" },
+
+	markdownListMarker = { fg = c.brown, bg = "NONE" },
 	-- }}}
 
 	-- {{{
