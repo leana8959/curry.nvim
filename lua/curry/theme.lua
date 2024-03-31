@@ -54,18 +54,18 @@ local highlight_groups = {
 	WildMenu = { fg = c.fg, bg = c.mono_3 },
 	-- }}}
 
-    -- `Bufferline` {{{
-    BufferCurrent = { fg = c.accent, bg = c.white},
-    BufferCurrentIndex = { fg = c.accent, bg = c.white},
-    BufferCurrentSign = {fg = c.accent, bg = c.white },
-    BufferCurrentMod = { fg = c.modified, bg = c.white },
-    BufferCurrentTarget = { fg = c.red, bg = c.white },
-    BufferInactive = { fg = c.mono_3, bg = c.tinted_bg },
-    BufferInactiveIndex = { fg = c.mono3, bg = c.tinted_bg },
-    BufferInactiveMod = { fg = c.modified, bg = c.tinted_bg },
-    BufferInactiveSign = { fg = c.mono_3, bg = c.tinted_bg },
-    BufferInactiveTarget = { fg = c.red, bg = c.tinted_bg },
-    -- }}}
+	-- `Bufferline` {{{
+	BufferCurrent = { fg = c.accent, bg = c.white },
+	BufferCurrentIndex = { fg = c.accent, bg = c.white },
+	BufferCurrentSign = { fg = c.accent, bg = c.white },
+	BufferCurrentMod = { fg = c.modified, bg = c.white },
+	BufferCurrentTarget = { fg = c.red, bg = c.white },
+	BufferInactive = { fg = c.mono_3, bg = c.tinted_bg },
+	BufferInactiveIndex = { fg = c.mono3, bg = c.tinted_bg },
+	BufferInactiveMod = { fg = c.modified, bg = c.tinted_bg },
+	BufferInactiveSign = { fg = c.mono_3, bg = c.tinted_bg },
+	BufferInactiveTarget = { fg = c.red, bg = c.tinted_bg },
+	-- }}}
 
 	-- `:h group-name` {{{
 	Comment = { fg = c.mono_3, bg = "NONE" },
@@ -504,7 +504,7 @@ local highlight_groups = {
 	pythonStringDelimiter = { fg = c.green, bg = "NONE" },
 	pythonSymbol = { fg = c.cyan, bg = "NONE" },
 
-    -- }}}
+	-- }}}
 
 	-- {{{
 	rubyBlock = { fg = c.purple, bg = "NONE" },
