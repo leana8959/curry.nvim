@@ -503,7 +503,6 @@ local highlight_groups = {
 	pythonModule = { fg = c.purple, bg = "NONE" },
 	pythonStringDelimiter = { fg = c.green, bg = "NONE" },
 	pythonSymbol = { fg = c.cyan, bg = "NONE" },
-
 	-- }}}
 
 	-- {{{
