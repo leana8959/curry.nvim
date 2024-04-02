@@ -148,7 +148,7 @@ local highlight_groups = {
 
 	["@function.macro"] = { link = "Macro" },
 	["@function.method"] = { fg = c.cyan },
-	["@constructor"] = { fg = c.fg },
+	["@constructor"] = { link = "Operator" },
 	["@operator"] = { fg = c.accent },
 
 	-- Keywords
