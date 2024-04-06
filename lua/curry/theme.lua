@@ -94,14 +94,14 @@ local highlight_groups = {
 	Structure = { fg = c.gold, bg = "NONE" },
 	Typedef = { fg = c.gold, bg = "NONE" },
 	Special = { fg = c.purple, bg = "NONE" },
-	SpecialChar = { fg = "NONE", bg = "NONE" },
+	SpecialChar = { fg = c.purple, bg = "NONE" },
 	Tag = { fg = "NONE", bg = "NONE" },
 	Delimiter = { fg = "NONE", bg = "NONE" },
 	SpecialComment = { fg = "NONE", bg = "NONE", italic = true },
 	Debug = { fg = "NONE", bg = "NONE" },
 	Underlined = { fg = "NONE", bg = "NONE", underline = true },
 	Ignore = { fg = c.mono_4, bg = "NONE" },
-	Error = { fg = c.orange, bg = "NONE", bold = true },
+	Error = { fg = c.red, bg = "NONE", bold = true },
 	Todo = { fg = c.accent, bg = "NONE" },
 	-- }}}
 
@@ -111,33 +111,103 @@ local highlight_groups = {
 	-- Here's a list of overrides
 	-- To get a list of all possible groups
 	-- `rg --no-filename -o -g '**/highlights.scm' '^\s*?[^;].*? (@[^\s_)"]+?)[\s)]*$' -r '$1' | sort | uniq`
+	--
+	-- Highlight groups (at the time of writing these highlight groups) can be found here
+	-- https://github.com/nvim-treesitter/nvim-treesitter/blob/1d1d92e94aea9ac0273015341438b63d2db528a5/CONTRIBUTING.md
 
-	["@keyword.gitcommit"] = { link = "Function" },
-	["@field"] = { fg = c.cyan, bg = "NONE" },
-	["@parameter"] = { fg = c.red, bg = "NONE" },
-	["@property"] = { fg = c.cyan, bg = "NONE" },
-	["@type.qualifier"] = { fg = c.orange, bg = "NONE" },
-	["@type.qualifier.rust"] = { fg = c.orange, bg = "NONE", bold = true },
+	-- Identifiers
+	["@variable"] = { link = "Identifier" },
+	["@variable.builtin"] = { fg = c.red },
+	["@variable.parameter.builtin"] = { fg = c.purple },
+	["@variable.parameter"] = { fg = c.red, bg = "NONE" },
+	["@variable.member"] = { fg = c.cyan, bg = "NONE" },
 
-	-- Treesitter markdown
-	["@text.title.1.marker.markdown"] = { fg = c.cyan, bg = "NONE" },
-	["@text.title.2.marker.markdown"] = { fg = c.cyan, bg = "NONE" },
-	["@text.title.3.marker.markdown"] = { fg = c.cyan, bg = "NONE" },
-	["@text.title.4.marker.markdown"] = { fg = c.cyan, bg = "NONE" },
-	["@text.title.5.marker.markdown"] = { fg = c.cyan, bg = "NONE" },
-	["@text.title.6.marker.markdown"] = { fg = c.cyan, bg = "NONE" },
-	["@text.title.1.markdown"] = { fg = c.blue },
-	["@text.title.2.markdown"] = { fg = c.blue },
-	["@text.title.3.markdown"] = { fg = c.blue },
-	["@text.title.4.markdown"] = { fg = c.blue },
-	["@text.title.5.markdown"] = { fg = c.blue },
-	["@text.title.6.markdown"] = { fg = c.blue },
+	["@constant"] = { link = "Constant" },
+	["@constant.builtin"] = { fg = c.purple },
+	["@constant.macro"] = { link = "Macro" },
 
-	["@text.literal.block.markdown"] = { fg = c.fg },
-	["@text.literal.markdown_inline"] = { fg = c.purple },
+	["@label"] = { link = "Label" },
+	["@module"] = { link = "Structure" },
+	["@module.builtin"] = { fg = c.brown },
 
-	["@punctuation.special.markdown"] = { fg = c.brown },
+	-- Literals
+	["@string"] = { link = "String" },
+	["@string.documentation"] = { link = "SpecialComment" },
+	["@string.regexp"] = { link = "SpecialChar" },
+	["@string.escape"] = { link = "SpecialChar" },
 
+	["@string.special"] = { link = "SpecialChar" },
+	["@string.special.url"] = { fg = c.fg, italic = true },
+	["@string.special.path"] = { fg = c.fg },
+
+	["@character"] = { link = "Character" },
+	["@character.special"] = { link = "SpecialChar" },
+
+	["@boolean"] = { link = "Boolean" },
+
+	["@number"] = { link = "Number" },
+	["@number.float"] = { link = "Number" },
+
+	["@type"] = { link = "Type" },
+	["@type.builtin"] = { link = "Type" },
+	["@type.definition"] = { link = "Typedef" },
+	["@attribute"] = { fg = c.orange, bg = "NONE", bold = true },
+	["@attribute.builtin"] = { fg = c.purple, bg = "NONE", bold = true },
+	["@property"] = { fg = c.cyan },
+
+	-- Functions
+	["@function"] = { link = "Function" },
+	["@function.builtin"] = { fg = c.purple },
+
+	["@function.macro"] = { link = "Macro" },
+	["@function.method"] = { fg = c.cyan },
+	["@constructor"] = { link = "Operator" },
+	["@operator"] = { fg = c.accent },
+
+	-- Keywords
+	["@keyword"] = { fg = c.purple },
+	["@keyword.modifier"] = { fg = c.orange, bg = "NONE" },
+
+	-- Punctuation
+	["@punctuation.delimiter"] = { link = "Delimiter" },
+	["@punctuation.bracket"] = { fg = c.fg },
+	["@punctuation.special"] = { fg = c.fg },
+
+	["@comment"] = { link = "Comment" },
+	["@comment.documentation"] = { link = "SpecialComment" },
+	["@comment.error"] = { link = "ErrorMsg" },
+	["@comment.warning"] = { link = "WarningMsg" },
+	["@comment.todo"] = { link = "Todo" },
+	["@comment.note"] = { fg = c.mono_2 },
+
+	-- Diff
+	["@diff.plus"] = { link = "DiffAdd" },
+	["@diff.minus"] = { link = "DiffDelete" },
+	["@diff.delta"] = { link = "DiffChange" },
+
+	-- Tag
+	["@tag"] = { link = "Label" },
+
+	-- Treesitter markup
+	["@markup.heading"] = { fg = c.blue },
+	["@markup.italic"] = { italic = true },
+	["@markup.strong"] = { bold = true },
+
+	["@markup.link.label"] = { link = "Identifier" },
+	["@markup.link.url"] = { fg = c.fg, italic = true },
+
+	["@markup.list"] = { fg = c.brown },
+	["@markup.list.checked"] = { fg = c.fg, bg = c.added_bg },
+	["@markup.list.unchecked"] = { fg = c.fg, bg = c.removed_bg },
+
+	["@markup.raw"] = { fg = c.purple },
+	["@markup.raw.block"] = { fg = c.fg },
+	["@markup.strikethrough"] = { fg = c.mono_2 },
+	["@markup.underline"] = { underline = true },
+
+	-- Gitcommit
+	["@markup.heading.gitcommit"] = { fg = "NONE", bg = "NONE" },
+	["@keyword.gitcommit"] = { fg = c.blue },
 	-- }}}
 
 	-- LSP Semantic tokens  {{{
@@ -154,18 +224,18 @@ local highlight_groups = {
 	["@lsp.type.label"] = { link = "Label" },
 	["@lsp.type.macro"] = { link = "Macro" },
 	["@lsp.type.method"] = { link = "Function" },
-	["@lsp.type.modifier"] = { link = "@type.qualifier" },
-	["@lsp.type.modifier.rust"] = { link = "@type.qualifier.rust" },
+	["@lsp.type.modifier"] = { link = "@keyword.qualifier" },
+	["@lsp.type.modifier.rust"] = { link = "@keyword.modifier.rust" },
 	["@lsp.type.namespace"] = { link = "Structure" },
 	["@lsp.type.number"] = { link = "Number" },
 	["@lsp.type.operator"] = { link = "Operator" },
-	["@lsp.type.parameter"] = { link = "@parameter" },
-	["@lsp.type.property"] = { link = "@property" },
+	["@lsp.type.parameter"] = { link = "@variable.parameter" },
+	["@lsp.type.property"] = { link = "@variable.member" },
 	["@lsp.type.regexp"] = { fg = "NONE", bg = "NONE", bold = true },
 	["@lsp.type.string"] = { link = "String" },
 	["@lsp.type.struct"] = { link = "Structure" },
 	["@lsp.type.type"] = { link = "Structure" },
-	["@lsp.type.typeParameter"] = { link = "@parameter" },
+	["@lsp.type.typeParameter"] = { link = "@variable.parameter" },
 	["@lsp.type.variable"] = { link = "Identifier" },
 	["@lsp.typemod.variable.defaultLibrary"] = { fg = c.accent, bg = "NONE" },
 	-- }}}
@@ -450,7 +520,7 @@ local highlight_groups = {
 
 	markdownCode = { fg = c.purple, bg = "NONE" },
 	markdownCodeBlock = { fg = c.fg },
-	markdownCodeDelimiter = { fg = c.purple},
+	markdownCodeDelimiter = { fg = c.purple },
 
 	markdownLinkText = { link = "Identifier" },
 	markdownUrl = { fg = c.fg, underline = true },
