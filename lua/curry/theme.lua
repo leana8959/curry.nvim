@@ -238,6 +238,12 @@ local highlight_groups = {
 	["@lsp.type.typeParameter"] = { link = "@variable.parameter" },
 	["@lsp.type.variable"] = { link = "Identifier" },
 	["@lsp.typemod.variable.defaultLibrary"] = { fg = c.accent, bg = "NONE" },
+
+	-- Typst
+	-- Take the "paramount.vim" approach: make unimportant information color-coded as comments
+	["@lsp.type.escape.typst"] = { link = "Comment" },
+	["@lsp.typemod.escape.math.typst"] = { link = "Comment" },
+	["@lsp.typemod.operator.math.typst"] = { link = "Comment" },
 	-- }}}
 
 	-- `:h spell` {{{
