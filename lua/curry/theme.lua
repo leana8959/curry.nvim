@@ -320,7 +320,7 @@ local highlight_groups = {
 	CmpItemMenu = { fg = "NONE", bg = "NONE" },
 	-- }}}
 
-	-- {{{
+	-- GitSigns {{{
 	GitSignsUntracked = { fg = c.mono_3, bg = "NONE" },
 	GitSignsAdd = { fg = c.added, bg = "NONE" },
 	GitSignsChange = { fg = c.modified, bg = "NONE" },
