@@ -265,8 +265,14 @@ local highlight_groups = {
 	-- Diagnostics {{{
 	DiagnosticError = { fg = c.red, bg = "NONE" },
 	DiagnosticWarn = { fg = c.orange, bg = "NONE" },
-	DiagnosticInfo = { fg = c.accent, bg = "NONE" },
-	DiagnosticHint = { fg = c.mono_2, bg = "NONE" },
+	DiagnosticInfo = { fg = c.mono_3, bg = "NONE" },
+	DiagnosticHint = { fg = c.mono_3, bg = "NONE" },
+
+	DiagnosticUnderlineError = { fg = "NONE", bg = "NONE", undercurl = true },
+	DiagnosticUnderlineWarn = { fg = "NONE", bg = "NONE", undercurl = true },
+	DiagnosticUnderlineInfo = { fg = "NONE", bg = "NONE", undercurl = true },
+	DiagnosticUnderlineHint = { fg = "NONE", bg = "NONE", undercurl = true },
+
 	DiagnosticUnnecessary = { fg = "NONE", bg = "NONE", italic = true },
 	DiagnosticDeprecated = { fg = "NONE", bg = "NONE", italic = true },
 	-- }}}
