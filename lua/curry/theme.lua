@@ -328,6 +328,10 @@ local highlight_groups = {
 	GitSignsCurrentLineBlame = { fg = c.mono_2, bg = "NONE", italic = true },
 	-- }}}
 
+	-- Leap.nvim {{{
+	LeapBackdrop = { link = "Comment" }, -- This makes jumping a lot clearer
+	-- }}}
+
 	---------------------------
 	-- Filetype Highlighting --
 	---------------------------
