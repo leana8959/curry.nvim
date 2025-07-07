@@ -23,7 +23,7 @@ local highlight_groups = {
 	Folded = { fg = "NONE", bg = c.tinted_bg },
 	FoldColumn = { fg = c.mono_3, bg = c.cursor },
 	SignColumn = { fg = "NONE", bg = "NONE" },
-	IncSearch = { fg = c.accent, bg = "NONE", reverse = true },
+	IncSearch = { fg = c.accent, bg = c.bg, reverse = true },
 	LineNr = { fg = c.mono_4, bg = "NONE" },
 	CursorLine = { fg = "NONE", bg = c.cursor },
 	MatchParen = { fg = c.red, bg = c.cursor, underline = true, bold = true },
