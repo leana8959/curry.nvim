@@ -10,7 +10,7 @@ local highlight_groups = {
 	Cursor = { fg = "NONE", bg = c.accent },
 	CursorColumn = { fg = "NONE", bg = c.cursor },
 	CursorIM = { fg = "NONE", bg = "NONE" },
-	CursorLineNr = { fg = c.fg, bg = c.mono_4, bold = true },
+	CursorLineNr = { fg = c.fg, bg = c.visual, bold = true },
 	Directory = { fg = c.blue, bg = "NONE" },
 	DiffAdd = { fg = "NONE", bg = c.added_bg },
 	DiffAdded = { fg = "NONE", bg = c.added_bg },
