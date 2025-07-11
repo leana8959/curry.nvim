@@ -27,7 +27,7 @@ local highlight_groups = {
 	LineNr = { fg = c.mono_3, bg = c.tinted_bg },
 	SignColumn = { link = "LineNr" },
 	CursorLine = { fg = "NONE", bg = c.cursor },
-	MatchParen = { fg = c.red, bg = c.cursor, underline = true, bold = true },
+	MatchParen = { fg = c.red, bg = c.cursor, bold = true },
 	ModeMsg = { fg = c.fg, bg = "NONE" },
 	MoreMsg = { fg = c.fg, bg = "NONE" },
 	NonText = { fg = c.mono_3, bg = "NONE" },
